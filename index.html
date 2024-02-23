@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bell's Best Cuts</title>
+
+        <!-- Style Sheets -->
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/generalMobile.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/headings.css">
+
+        <!-- Scripts -->
+        <script src="js/app.js" defer></script>
+
+    </head>
+    <body>
+        <!-- HEADER -->
+        <div class="header" id="appHeader">
+            <div class="headerContents">
+                <img src="img/logo_v2.jpg" class="logo" onclick="location.href='index.html';">
+                <div class="headerButton">
+                    <div class="headerButtonText">About</div>
+                </div>
+                <div class="headerButton" onclick="location.href='html/services.html';">
+                    <div class="headerButtonText">Services</div>
+                </div>
+                <div class="headerButton">
+                    <div class="headerButtonText">Social Media</div>
+                </div>
+                <div class="headerButton" onclick="location.href='html/gallery.html';">
+                    <div class="headerButtonText">Gallery</div>
+                </div>
+                <div class="headerButton" onclick="location.href='html/faqs.html';">
+                    <div class="headerButtonText">FAQs</div>    
+                </div>
+                <div class="headerButton">
+                    <div class="headerButtonText">Contact</div>    
+                </div>
+                
+            </div>
+        </div>
+        <div class="progBar" id="progBar"></div>
+
+        <!-- HEADING -->
+        <div class="heading">
+            <h1>Bell's Best Cuts</h1>
+            <div class="subh1">family owned and run retail butchers</div>
+        </div>
+
+        <div class="content">
+            <!-- CONTENT_BODY -->
+            <div class="contentBody">
+                <div class="contentBodySection">
+                    <div class="text">About us</div>
+                </div>
+                <div class="contentBodySection">
+                    <div class="text">Latest facebook posts</div>
+                </div>
+                <div class="contentBodySection">
+                    <div class="text">Meet the team</div>
+                </div>
+                <div class="contentBodySection">
+                    <div class="text">Reviews</div>
+                </div>
+                <div class="contentBodySection">
+                    <div class="text">Contact us</div>
+                    <div class="text">Opening hours</div>
+                </div>
+                <div class="contentBodySection">
+                    <div class="text">Socials links</div>                            
+                </div>
+
+            </div>           
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                headerBehaviour();
+                progBarBehaviour()
+            });
+        </script>
+    </body>
+</html>

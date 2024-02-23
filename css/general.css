@@ -1,0 +1,36 @@
+body {
+    margin:0;
+    height: 100%;
+    background-color: rgb(119, 86, 59);
+}
+
+.content{
+    background-color: rgb(15, 15, 15);
+    height: 100%px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid;
+    border-color: rgba(95, 95, 95, 0.438);
+    border-width: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(22, 22, 22, 0.514);
+
+    z-index: 2;
+}
+
+.profilePic{
+    max-width: 100%;
+    border-radius: 50%;
+    border:solid;
+    border-width: 2px;
+    border-color: rgba(95, 95, 95, 0.438);
+}
+
+.text{
+    color:rgb(255, 255, 255);
+    font-size: 16pt;
+}
+
+.contentBodySection{
+    padding:100px;
+}
