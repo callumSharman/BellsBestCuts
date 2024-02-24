@@ -8,7 +8,7 @@
     z-index: 10;
     top: 0px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(22, 22, 22, 0.164);
-
+    display: none;
 }
 
 .progBar{
@@ -16,9 +16,6 @@
     width:0%;
     top:70px;
     background-color: rgb(78, 56, 39);
-    border: solid;
-    border-color: rgb(75, 53, 38);
-    border-width: 1px;
     position: fixed;
     z-index: 11;
 
