@@ -1,4 +1,4 @@
-.heading, .headingText{
+.heading, .headingContents{
     height: 95vh;
 
 }
@@ -21,7 +21,7 @@
     background-color: rgba(92, 66, 45, 0.267);
 }
 
-.headingText{
+.headingContents{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,6 +44,23 @@ h1{
     font-size: 2vw;
 
     animation: subh1Load 0.6s ease-in-out;
+}
+
+.imgBubbleSelector{
+    display: flex;
+    position: relative;
+    top: 21%;
+}
+
+.imgBubble{
+    margin: 3px;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(255, 255, 255);
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 50%;
 }
 
 @keyframes h1Load{

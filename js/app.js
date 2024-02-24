@@ -1,9 +1,10 @@
 /** handles the header bars behaviour */
 
-// could add functionality so that if scrolled to top bar disappears again after a time
+// could add functionality so that bar not there initially then scrolling adds it and
+// then if scrolled to top bar disappears again after a given time
 function headerBehaviour(){
     const TRAVEL_AMT = 9;
-    const PERCENT_WINDOW_HEIGHT_BEFORE_SCROLL_UP = 85;
+    const PERCENT_WINDOW_HEIGHT_BEFORE_SCROLL_UP = 80;
 
     const header = document.getElementById('appHeader');
     const progBar = document.getElementById('progBar');
@@ -20,7 +21,6 @@ function headerBehaviour(){
 
 
         if(currScrollStatus - prevScrollStatus > 0){
-            header.style.display = 'block';
             
             // if not already all the way up AND past some specified height
             if((header.style.top != '-50px')  && 
@@ -37,7 +37,7 @@ function headerBehaviour(){
                 
                 //header.style.top = headerOldTop + travelAmt + 'px'; // push header down
                 header.style.top = 0 + 'px'; // push header down
-                progBar.style.top = 70 + 'px';
+                progBar.style.top = 60 + 'px';
             }
         }
 

@@ -1,20 +1,20 @@
+.header, .headerContents{
+    height: 60px;
+}
 .header{
     color: white;
     background-color: rgb(22, 22, 22);
-
-    height: 70px;
     width: 100%;
     position: fixed;
     z-index: 10;
     top: 0px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(22, 22, 22, 0.164);
-    display: none;
 }
 
 .progBar{
     height: 6px;
     width:0%;
-    top:70px;
+    top:60px;
     background-color: rgb(78, 56, 39);
     position: fixed;
     z-index: 11;
@@ -23,7 +23,6 @@
 }
 
 .headerContents{
-    height: 70px;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -42,7 +41,7 @@
 }
 
 .logo{
-    width:70px; 
+    width:53px; 
     border-radius: 50%;
     cursor: pointer;
 }

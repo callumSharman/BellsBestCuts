@@ -19,14 +19,6 @@ body {
     top:-10vh;
 }
 
-.profilePic{
-    max-width: 100%;
-    border-radius: 50%;
-    border:solid;
-    border-width: 2px;
-    border-color: rgba(95, 95, 95, 0.438);
-}
-
 .text{
     color:rgb(255, 255, 255);
     font-size: 16pt;
