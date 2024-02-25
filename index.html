@@ -24,31 +24,7 @@
     </head>
     <body>
         <!-- HEADER -->
-        <div class="header" id="appHeader">
-            <div class="headerContents">
-                <img src="img/logo_v2.jpg" class="logo" onclick="location.href='index.html';">
-                <div class="headerButton">
-                    <div class="headerButtonText">About</div>
-                </div>
-                <div class="headerButton" onclick="location.href='html/services.html';">
-                    <div class="headerButtonText">Services</div>
-                </div>
-                <div class="headerButton">
-                    <div class="headerButtonText">Social Media</div>
-                </div>
-                <div class="headerButton" onclick="location.href='html/gallery.html';">
-                    <div class="headerButtonText">Gallery</div>
-                </div>
-                <div class="headerButton" onclick="location.href='html/faqs.html';">
-                    <div class="headerButtonText">FAQs</div>    
-                </div>
-                <div class="headerButton">
-                    <div class="headerButtonText">Contact</div>    
-                </div>
-                
-            </div>
-        </div>
-        <div class="progBar" id="progBar"></div>
+        <script src="js/header.js"></script>
 
         <!-- HEADING -->
         <div class="heading">
@@ -108,12 +84,5 @@
                 <b><a href="https://callumsharman.github.io/" style="color: grey; ">Callum Sharman</a></b>
             </div>
         </div>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                headerBehaviour();
-                progBarBehaviour();
-            });
-        </script>
     </body>
 </html>

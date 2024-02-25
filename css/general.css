@@ -68,7 +68,7 @@ body {
     justify-content: center;
     flex-direction: column;
     z-index: 1;
-    padding-top: 18px;
+    padding-top: 15px;
 }
 
 .socialsIcons{
@@ -86,5 +86,5 @@ body {
     position: absolute;
     color: grey;
     font-size: 11pt;
-    bottom:20px;
+    bottom:18px;
 }
