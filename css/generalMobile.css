@@ -8,15 +8,15 @@
     .content{
         width:100%;
     }
-    .flex1{
+
+    .faceBookPosts{
         flex-direction: column;
+        height:auto;
     }
-    .f1section1{
-        padding-left: 2%;
-        padding-top: 4%;
-        
-    }
-    .f1section2{
-        padding-right: 2%;
+
+    .faceBookPost{
+        width:90%;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 }

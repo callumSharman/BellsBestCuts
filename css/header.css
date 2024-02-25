@@ -1,9 +1,9 @@
 .header, .headerContents{
-    height: 60px;
+    height: 52px;
 }
 .header{
     color: white;
-    background-color: rgb(22, 22, 22);
+    background-color: var(--primary-colour);
     width: 100%;
     position: fixed;
     z-index: 10;
@@ -14,8 +14,8 @@
 .progBar{
     height: 6px;
     width:0%;
-    top:60px;
-    background-color: rgb(78, 56, 39);
+    top:52px;
+    background-color: var(--secondary-colour);
     position: fixed;
     z-index: 11;
 
@@ -36,12 +36,12 @@
 
 .headerButtonText{
     color:rgb(255, 255, 255);
-    font-size: 16pt;
+    font-size: 14pt;
     cursor: pointer;
 }
 
 .logo{
-    width:53px; 
+    width:43px; 
     border-radius: 50%;
     cursor: pointer;
 }

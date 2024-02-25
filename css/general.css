@@ -1,23 +1,32 @@
+:root {
+    --primary-colour:rgb(27, 27, 27);
+    --secondary-colour:rgb(167, 122, 86);
+}
+
 body {
     margin:0;
     height: 100%;
-    background-color: rgb(119, 86, 59);
+    background-color: var(--secondary-colour);
 }
 
 .content{
-    background-color: rgb(15, 15, 15);
+    position: relative;
     height: 100%;
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
+    z-index: 2;
+}
+
+.contentSection{
+    background-color: var(--primary-colour);
     border: solid;
     border-color: rgba(95, 95, 95, 0.438);
     border-width: 1px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(22, 22, 22, 0.514);
-
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(22, 22, 22, 0.164);
     position: relative;
-    top:-10vh;
 }
+
 
 .text{
     color:rgb(255, 255, 255);
@@ -26,4 +35,56 @@ body {
 
 .contentBodySection{
     padding:100px;
+}
+
+.faceBookPosts{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+
+.faceBookPost{
+    width:32%;
+    height:600px;
+    border:none;
+    overflow:hidden;
+    margin-left:auto;
+    margin-right:auto;
+
+    background-color: rgb(255, 255, 255);
+
+    border: solid;
+    border-color: var(--primary-colour);
+    border-width: 4px;
+}
+
+.footer{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color:var(--primary-colour);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    padding-top: 18px;
+}
+
+.socialsIcons{
+    display:flex;
+    flex-direction: row;
+}
+
+.socialIcon{  /* in-line with facebook and instragrams guidelines */
+    width:35px;
+    padding: 18px;
+    cursor: pointer;
+}
+
+.attribution{
+    position: absolute;
+    color: grey;
+    font-size: 11pt;
+    bottom:20px;
 }

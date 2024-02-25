@@ -4,7 +4,7 @@
 // then if scrolled to top bar disappears again after a given time
 function headerBehaviour(){
     const TRAVEL_AMT = 9;
-    const PERCENT_WINDOW_HEIGHT_BEFORE_SCROLL_UP = 80;
+    const PERCENT_WINDOW_HEIGHT_BEFORE_SCROLL_UP = 90;
 
     const header = document.getElementById('appHeader');
     const progBar = document.getElementById('progBar');
@@ -23,7 +23,7 @@ function headerBehaviour(){
         if(currScrollStatus - prevScrollStatus > 0){
             
             // if not already all the way up AND past some specified height
-            if((header.style.top != '-50px')  && 
+            if((header.style.top != '-52px')  && 
             (currScrollStatus > (PERCENT_WINDOW_HEIGHT_BEFORE_SCROLL_UP/100 * window.innerHeight))){
 
                 header.style.top = headerOldTop + (-1 * TRAVEL_AMT) + 'px'; // push header up
@@ -37,7 +37,7 @@ function headerBehaviour(){
                 
                 //header.style.top = headerOldTop + travelAmt + 'px'; // push header down
                 header.style.top = 0 + 'px'; // push header down
-                progBar.style.top = 60 + 'px';
+                progBar.style.top = 52 + 'px';
             }
         }
 

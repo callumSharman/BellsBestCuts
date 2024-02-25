@@ -1,5 +1,5 @@
 .heading, .headingContents{
-    height: 95vh;
+    height: 100vh;
 
 }
 
@@ -42,7 +42,7 @@ h1{
 .imgBubbleSelector{
     display: flex;
     position: relative;
-    top: 21%;
+    top: 29%;
 }
 
 .imgBubble{
