@@ -1,13 +1,14 @@
 :root {
-    --primary-colour:rgb(27, 27, 27);
-    --secondary-colour:rgb(167, 122, 86);
+    --colour-one:rgb(27, 27, 27);
+    --colour-two:rgb(167, 122, 86);
+    --colour-three:rgb(40, 40, 40);
     --font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
     margin:0;
     height: 100%;
-    background-color: var(--secondary-colour);
+    background-color: var(--colour-two);
 }
 
 .content{
@@ -20,7 +21,7 @@ body {
 }
 
 .contentSection{
-    background-color: var(--primary-colour);
+    background-color: var(--colour-one);
     border: solid;
     border-color: rgba(95, 95, 95, 0.438);
     border-width: 1px;
@@ -52,7 +53,7 @@ body {
     background-color: rgb(255, 255, 255);
 
     border: solid;
-    border-color: var(--primary-colour);
+    border-color: var(--colour-one);
     border-width: 4px;
 }
 
@@ -60,7 +61,7 @@ body {
     position: relative;
     width: 100%;
     height: 200px;
-    background-color:var(--primary-colour);
+    background-color:var(--colour-one);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,86 +86,4 @@ body {
     color: grey;
     font-size: 11pt;
     bottom:18px;
-}
-
-.contactBox{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    width:100%;
-    padding: 20px;
-}
-
-.mapContainer{
-    border: solid;
-    border-width: 3px;
-    border-color: rgb(66, 66, 66);
-    width:70%;
-    height:100%;
-}
-
-.embeddedMap{
-    border:none;
-    width:100%;
-    height:100%;
-}
-
-.openingHoursBox{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.dayBox{
-    display: flex;
-    flex-direction: column;
-    padding: 2px;
-    justify-content: center;
-    align-items: center;
-}
-
-.dayCircle{
-    height:50px;
-    width:50px;
-    border-radius: 50%;
-    background-color: rgb(255, 255, 255);
-    font-size: 12pt;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-family);
-    color: rgb(0, 0, 0);
-}
-
-.dayText{
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:rgb(255, 255, 255);
-    font-size: 10pt;
-    font-family: var(--font-family);
-}
-
-.contactTextHeading{
-    color:rgb(255, 255, 255);
-    font-size: 15px;
-    font-family: var(--font-family);
-
-}
-
-.contactText{
-    color:rgb(255, 255, 255);
-    font-size: 20px;
-    font-family: var(--font-family);
-    padding-bottom: 20px;
-}
-
-.contactBoxHeading{
-    color:rgb(255, 255, 255);
-    font-size: 16pt;
-    font-family: var(--font-family);
 }

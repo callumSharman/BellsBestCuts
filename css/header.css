@@ -3,7 +3,7 @@
 }
 .header{
     color: white;
-    background-color: var(--primary-colour);
+    background-color: var(--colour-one);
     width:100%;
     position: fixed;
     z-index: 10;
@@ -15,7 +15,7 @@
     height: 6px;
     width:0%;
     top:52px;
-    background-color: var(--secondary-colour);
+    background-color: var(--colour-two);
     position: fixed;
     z-index: 11;
 
@@ -71,7 +71,7 @@
     border: solid;
     border-radius: 50%;
     border-width: 6px;
-    border-color: var(--primary-colour);
+    border-color: var(--colour-one);
     cursor: pointer;
     z-index: 12;
 }

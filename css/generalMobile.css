@@ -21,26 +21,4 @@
         margin-top: 5px;
         margin-bottom: 5px;
     }
-
-    .contactTextHeading{
-        font-size: 10px;
-    }
-    
-    .contactText{
-        font-size: 15px;
-    }
-
-    .contactBoxHeading{
-        font-size: 13pt;
-    }
-
-    .dayText{
-        font-size: 8pt;
-    }
-
-    .dayCircle{
-        height:35px;
-        width:35px;
-        font-size: 8pt;
-    }
 }
