@@ -1,6 +1,5 @@
 .heading, .headingContents{
     height: 100vh;
-
 }
 
 .heading{
@@ -62,4 +61,28 @@ h1{
 
 @keyframes subh1Load{
     from{color: rgb(107, 107, 107);}
+}
+
+@media(max-width:768px) {
+    h1{
+        font-size: 10vw;
+    }
+
+    .subh1{
+        font-size: 4vw;
+    }
+
+    .heading, .headingContents{
+        height: 70vh;
+    }
+
+    .imgBubbleSelector{
+        top:30%
+    }
+
+    .imgBubble{
+        height: 12px;
+        width: 12px;
+    }
+
 }

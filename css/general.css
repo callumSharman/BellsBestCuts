@@ -14,7 +14,7 @@ body {
 .content{
     position: relative;
     height: 100%;
-    width: 90%;
+    width: 92%;
     margin-left: auto;
     margin-right: auto;
     z-index: 2;
@@ -86,4 +86,22 @@ body {
     color: grey;
     font-size: 11pt;
     bottom:18px;
+}
+
+@media(max-width:768px) {
+    .content{
+        width:100%;
+    }
+
+    .faceBookPosts{
+        flex-direction: column;
+        height:auto;
+    }
+
+    .faceBookPost{
+        width:90%;
+        height: 400px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
 }
