@@ -2,6 +2,7 @@
     --colour-one:rgb(27, 27, 27);
     --colour-two:rgb(167, 122, 86);
     --colour-three:rgb(40, 40, 40);
+    --colour-four:rgba(90, 90, 90, 0.322);/* hover colour*/
     --font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -44,7 +45,7 @@ body {
 
 .faceBookPost{
     width:32%;
-    height:600px;
+    height:500px;
     border:none;
     overflow:hidden;
     margin-left:auto;

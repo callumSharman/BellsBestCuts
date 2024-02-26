@@ -45,8 +45,8 @@
     justify-content: center;
 }
 
-.headerButton :hover{
-    background-color: rgba(90, 90, 90, 0.322);
+.headerButton:hover{
+    background-color: var(--colour-four);
     transition: 0.10s;
 }
 
@@ -75,6 +75,32 @@
     cursor: pointer;
     z-index: 12;
 }
+
+.headerButtonContainer{
+    height: 100%;
+}
+
+.headerDropDown{
+    display: none;
+    border: solid;
+    border-width: 1px;
+    border-color: grey;
+    background-color: var(--colour-one);
+}
+
+.dropDownSection{
+    height: 35px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 12px;
+    cursor: pointer;
+}
+
+.headerDropDown :hover{
+    background-color: var(--colour-four);
+}
+
 
 @media(max-width:768px) {
     .headerButtonText{
