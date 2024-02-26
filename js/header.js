@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /** handles the header bars behaviour */
 function headerBehaviour(){
-    const TRAVEL_AMT = 9;
+    const TRAVEL_AMT = 20;
     const PERCENT_WINDOW_HEIGHT_BEFORE_SCROLL_UP = 90;
 
     const header = document.getElementById('appHeader');
