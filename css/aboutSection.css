@@ -1,0 +1,48 @@
+.aboutBox{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.aboutBoxSection1{
+    width:40%;
+    background-color: var(--colour-one);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutBoxSection2{
+    width:60%;
+    background-color: var(--colour-one);
+    padding-right:60px;
+    padding-top:20px;
+    padding-bottom:30px;
+}
+
+.aboutSectionImg{
+    width:70%;
+    height:auto;
+    padding-top:20px;
+    padding-bottom:30px;
+}
+
+.aboutHeading{
+    color:rgb(255, 255, 255);
+    font-size: 26pt;
+    font-family: var(--font-family-two);
+    text-align: right;
+}
+
+.aboutText{
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: var(--font-family-one);
+    padding-bottom: 35px;
+}
+
+.emphasisAboutText{
+    color: rgb(167, 122, 86);
+    font-size: 24px;
+    font-family: var(--font-family-one);
+}

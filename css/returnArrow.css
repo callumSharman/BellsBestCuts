@@ -21,8 +21,7 @@
     transition: 0.2s;
 }
 
-.returnArrow:hover .arrow{
-    color: rgb(233, 233, 233);
+.returnArrow:hover .arrow{ 
     transition: 0.2s;
 }
 
@@ -31,7 +30,7 @@
 }
 
 .animate-returnArrow-loadOut{
-    animation: returnArrowLoadOut 0.3s;
+    animation: returnArrowLoadOut 0.1s;
 }
 
 .arrow{

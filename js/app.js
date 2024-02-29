@@ -30,14 +30,13 @@ function returnArrowBehaviour(){
             }
 
             if((currScrollStatus < APPEARANCE_HEIGHT) && alreadyAdded){
-                console.log("asgasg");
-                returnArrow.style.display = "none";
                 // trigger load out animation
                 returnArrow.classList.add('animate-returnArrow-loadOut');
                 // remove after animation to prevent further triggering
                 setTimeout(function() {
                     returnArrow.classList.remove('animate-returnArrow-loadOut');
-                }, 300);
+                    returnArrow.style.display = "none";
+                }, 100);
                 alreadyAdded = false;
             }
         }
