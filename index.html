@@ -17,8 +17,8 @@
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/headings.css">
         <link rel="stylesheet" href="css/contactSection.css">
-        
-        
+        <link rel="stylesheet" href="css/returnArrow.css">
+
         <!-- Scripts -->
         <script src="js/app.js" defer></script>
 
@@ -26,6 +26,13 @@
     <body>
         <!-- HEADER -->
         <script src="js/headerFooter.js"></script>
+
+        <!-- RETURN ARROW -->
+        <div class="returnArrow" id="returnArrow" onclick="returnArrowOnClick()">
+            <div class="arrow">
+                ^
+            </div>
+        </div>
 
         <!-- HEADING -->
         <div class="heading">
@@ -70,7 +77,7 @@
                         <div class="contactBox">
                             <div class="contactDetailsContainer">
                                 <div class="contactBoxHeading"><b>CONTACT INFORMATION</b></div>
-                                <hr class="divider">
+                                <hr class="divider" style="margin-bottom: 30px;">
                                 <div class="contactTextHeading">Address</div>
                                 <div class="contactText">27 Wray Cres, Mount Evelyn VIC 3796</div>
 
@@ -123,6 +130,7 @@
                 </div>           
             </div>
         </div>
+
         <!-- FOOTER -->
     </body>
 </html>

@@ -1,0 +1,57 @@
+.returnArrow{
+    width: 37px;
+    height: 37px;
+    background-color: rgba(187, 185, 185, 0.747);
+    position: fixed;
+    bottom:40px;
+    right:40px;
+    z-index: 100;
+    border: solid;
+    border-width: 3px;
+    border-radius: 15%;
+    border-color: rgba(255, 255, 255, 0);
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+    display: none;
+}
+
+.returnArrow:hover{
+    background-color: rgba(255, 255, 255, 0.747);
+    transition: 0.2s;
+}
+
+.returnArrow:hover .arrow{
+    color: rgb(233, 233, 233);
+    transition: 0.2s;
+}
+
+.animate-returnArrow-loadIn{
+    animation: returnArrowLoadIn 0.3s;
+}
+
+.animate-returnArrow-loadOut{
+    animation: returnArrowLoadOut 0.3s;
+}
+
+.arrow{
+    color: var(--colour-one);
+    font-size: 38pt;
+    position: relative;
+    top:-3px;
+    transition: 0.2s;
+}
+
+@keyframes returnArrowLoadIn{
+    from{opacity: 0;}
+}
+
+@keyframes returnArrowLoadOut{
+    to{opacity: 0;}
+}
+
+@media(max-width:768px) {
+    .returnArrow{
+        display: none;
+    }
+}

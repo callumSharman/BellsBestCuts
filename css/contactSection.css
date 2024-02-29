@@ -77,12 +77,12 @@
     color:rgb(255, 255, 255);
     font-size: 20px;
     font-family: var(--font-family);
-    padding-bottom: 20px;
+    padding-bottom: 35px;
 }
 
 .contactBoxHeading{
     color:rgb(255, 255, 255);
-    font-size: 16pt;
+    font-size: 18pt;
     font-family: var(--font-family);
 }
 
