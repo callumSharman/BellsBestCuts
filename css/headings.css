@@ -25,7 +25,7 @@ h1{
     color: rgb(255, 255, 255);
     text-align: center;
     font-size: 6vw;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:var(--font-family-two);
     animation: h1Load 0.6s ease-out;
 }
 
