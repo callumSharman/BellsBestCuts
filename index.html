@@ -24,7 +24,6 @@
         <script src="js/headerFooter.js"></script>
 
 
-
         <!-- RETURN ARROW -->
         <div class="returnArrow" id="returnArrow" onclick="returnArrowOnClick()">
             <div class="arrow">
@@ -33,12 +32,11 @@
         </div>
 
 
-
         <!-- HEADING -->
         <div class="heading">
             <div class="headingContents">
                 <h1>Bell's Best Cuts</h1>
-                <div class="subh1">family owned and run retail butchers</div>
+                <div class="subh1">family butcher1</div>
                 <div class="imgBubbleSelector">
                     <div class="imgBubble"></div>
                     <div class="imgBubble"></div>
@@ -48,10 +46,9 @@
         </div>
 
 
-
         <div class="content">
-            <!-- FIRST SECTION -->
-            <div class="contentSection" id="contentSection1" style="top:-4vh;">
+            <!-- ABOUT SECTION -->
+            <div class="contentSection" id="aboutSection" style="top:-4vh;">
                 <div class="contentBody">
                     <div class="contentBodySection">
                         <div class="aboutBox">
@@ -95,7 +92,6 @@
                             <img class="galleryImg" src="img/gallery/meat-1.jpg">
                             <img class="galleryImg" src="img/gallery/mitch-1.jpg">
                             <img class="galleryImg" src="img/gallery/liam-2.jpg">
-                            <img class="galleryImg" src="img/gallery/kelly-1.jpg">
                             <img class="galleryImg" src="img/gallery/shop-1.jpg">
                             <img class="galleryImg" src="img/gallery/ryan-1.jpg">
                             <img class="galleryImg" src="img/gallery/team-1.jpg">
@@ -120,14 +116,23 @@
             </div>
 
 
-            <!-- THIRD SECTION -->
-            <div class="contentSection" id="contentSection2" style="top:4vh">
+            <!-- FINAL SECTION -->
+            <div class="contentSection" style="top:4vh;">
                 <div class="contentBody">
-                    <div class="contentBodySection">
-                        <div class="text">Meet the team</div>
+                    <div class="contentBodySection" style="height: 300px; background-color: var(--colour-three);">
+                        <div class="text">Meat the team</div>
                     </div>
-                    <div class="contentBodySection">
-                        <div class="text" style="padding-bottom: 300px;">Reviews</div>
+                    <div class="contentBodySection" id="customerReviews" style="background-color: var(--colour-one);">
+                        <div class="reviewsContainer">
+                            <div>
+                                <hr class="divider" style="margin-bottom: 40px; width: 60%;">
+                                <div class="reviewContainer">
+                                    <div class="text">"great customer service</div>
+                                    <div class="text">and even better quality meat"</div>
+                                </div>
+                                <hr class="divider" style="margin-top: 40px; width: 80%;">
+                            </div>
+                        </div>
                     </div>
                     <div class="contentBodySection" id="contactSection">
                         <div class="contactBox">
@@ -187,6 +192,12 @@
             </div>
         </div>
 
+
         <!-- FOOTER -->
+
+
+        <script>
+            console.log("screenWidth: ", window.screen.width);
+        </script>
     </body>
 </html>

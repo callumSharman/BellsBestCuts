@@ -16,7 +16,7 @@ body {
 .content{
     position: relative;
     height: 100%;
-    width: 92%;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
     z-index: 2;
@@ -41,6 +41,8 @@ body {
     display: flex;
     flex-direction: row;
     height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .faceBookPost{
@@ -66,11 +68,11 @@ body {
 
 .certificateRibbon{
     transform: rotate(30deg);
-    height: 380px;
+    height: 420px;
     z-index: 200;
     position: relative;
     top:-40px;
-    left:-60px;
+    left:-120px;
 }
 
 .gallery{
@@ -87,6 +89,25 @@ body {
     padding: 5px;
 }
 
+.reviewsContainer{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviewContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(min-width:1280px){
+    .content{
+        width: 1216px;
+    }
+}
 
 @media(max-width:768px) {
     .content{
