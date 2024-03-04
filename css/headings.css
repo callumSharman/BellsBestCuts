@@ -3,7 +3,7 @@
 }
 
 .heading{
-    background-image: url("../img/header.jpg");
+    background-image: url("../img/headers/header-1.jpg");
     background-color: #cccccc; /* Used if the background is unavailable */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */

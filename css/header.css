@@ -101,6 +101,26 @@
     background-color: var(--colour-four);
 }
 
+#menuButtonContainer{
+    aspect-ratio:1;
+    display: none;
+}
+
+.menuButtonSymbol{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.menuButtonSection{
+    height: 2px;
+    width:60%;
+    background-color: white;
+    margin: 3.5px;
+    border-radius: 1px;
+}
 
 @media(max-width:768px) {
     .headerButtonText{
@@ -117,6 +137,14 @@
     }
 
     .progBar{
+        display: none;
+    }
+
+    #menuButtonContainer{
+        display: block;
+    }
+
+    .headerButtonContainer{
         display: none;
     }
 }
