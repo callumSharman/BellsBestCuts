@@ -122,6 +122,23 @@
     border-radius: 1px;
 }
 
+.mobileMenu{
+    width:100%;
+    height:100vh;
+    background-color: var(--colour-one);
+    display: none;
+}
+
+.menuButtonX{
+    font-family: var(--font-family-one);
+    font-size: 24pt;
+    display: none;
+}
+
+.mobileMenuButtonContainer{
+    height: 100px;
+}
+
 @media(max-width:768px) {
     .headerButtonText{
         font-size: 10pt;

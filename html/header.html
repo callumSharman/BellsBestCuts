@@ -31,26 +31,57 @@
                 </div>
             </div>
             <div class="headerButtonContainer">
-                <div class="headerButton" onclick="location.href='html/faqs.html';">
-                    <div class="headerButtonText">FAQs</div>    
-                </div>
-            </div>
-            <div class="headerButtonContainer">
                 <div class="headerButton" onclick='scrollDownTo("contactSection")'>
                     <div class="headerButtonText">Contact</div>    
                 </div>
             </div>
             <div class="headerButtonContainer" id="menuButtonContainer">
-                <div class="headerButton" id="meunButton">
-                    <div class="menuButtonSymbol">
+                <div class="headerButton" id="meunButton" onclick="mobileMenuBehaviour();">
+                    <div class="menuButtonSymbol" id="menuButtonSymbol">
                         <div class="menuButtonSection"></div>
                         <div class="menuButtonSection"></div>
                         <div class="menuButtonSection"></div>
                     </div>
+                    <div class="menuButtonX" id="menuButtonX">X</div>
                 </div>
             </div>
         </div>
         
     </div>
     <div class="progBar" id="progBar"></div>
+
+    <div class="mobileMenu" id="mobileMenu">
+        <div class="mobileMenuButtons">
+            <div class="mobileMenuButtonContainer">
+                <div class="headerButton" onclick='scrollDownTo("aboutSection")'>
+                    <div class="headerButtonText">About</div>
+                </div>
+            </div>
+            <div class="mobileMenuButtonContainer">
+                <div class="headerButton" onclick="location.href='html/order.html';">
+                    <div class="headerButtonText">Order</div>
+                </div>
+            </div>
+            <div class="mobileMenuButtonContainer">
+                <div class="headerButton">
+                    <div class="headerButtonText">Social Media</div>
+                </div>
+                <div class="headerDropDown">
+                    <div class="dropDownSection" onclick="location.href='https://www.facebook.com/BellsBestCuts';">Facebook</div>
+                    <div class="dropDownSection" onclick="location.href='https://www.instagram.com/bellsbestcuts/';">Instagram</div>
+                    <div class="dropDownSection" onclick="location.href='https://www.tiktok.com/@bellythebutcher';">TikTok</div>
+                </div>
+            </div>
+            <div class="mobileMenuButtonContainer">
+                <div class="headerButton" onclick="location.href='gallery.html';">
+                    <div class="headerButtonText">Gallery</div>
+                </div>
+            </div>
+            <div class="mobileMenuButtonContainer">
+                <div class="headerButton" onclick='scrollDownTo("contactSection")'>
+                    <div class="headerButtonText">Contact</div>    
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

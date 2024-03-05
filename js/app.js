@@ -57,3 +57,31 @@ function scrollDownTo(sectionId){
         section.scrollIntoView({ behavior: 'smooth' });
     }
 }
+
+/** handles the behaviour related to the sliding down menu in mobile mode */
+function mobileMenuBehaviour(){
+    const mobileMenu = document.getElementById("mobileMenu");
+    const meunButtonX = document.getElementById("menuButtonX");
+    const menuButtonSymbol = document.getElementById("menuButtonSymbol");
+
+
+    
+    menuEnabled = null;
+    if(mobileMenu.style.display === 'none'){
+        menuEnabled = false;
+    } else menuEnabled = true;
+
+    if(menuEnabled){ // enabled - turn off menu
+        mobileMenu.style.display = 'none';
+        menuButtonSymbol.style.display = 'flex';
+        meunButtonX.style.display = 'none';
+        document.body.style.overflow = 'auto'; // resume scrolling behaviour
+        
+    } else { // disabled - turn on menu
+        mobileMenu.style.display='block';
+        menuButtonSymbol.style.display = 'none';
+        meunButtonX.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // restricts scrolling
+    }
+    
+}
