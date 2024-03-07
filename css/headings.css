@@ -3,13 +3,12 @@
 }
 
 .heading{
-    background-image: url("../img/headers/header-1.jpg");
-    background-color: #cccccc; /* Used if the background is unavailable */
+    /* background-image is set using JS */
+    background-color: var(--colour-two); /* Used if the background is unavailable */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
 }
-
 
 
 .headingContents{
@@ -18,6 +17,7 @@
     align-items: center;
     flex-direction: column;
     background-color: rgba(92, 66, 45, 0.5);
+    position: relative;
 }
 
 h1{
@@ -51,8 +51,9 @@ h1{
     background-color: rgb(255, 255, 255);
     border: solid;
     border-width: 1px;
-    border-color: rgb(0, 0, 0);
+    border-color: var(--colour-one);
     border-radius: 50%;
+    cursor: pointer;
 }
 
 @keyframes h1Load{

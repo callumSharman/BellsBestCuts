@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     returnArrowBehaviour();
+    drawHeaderImgBubbles()
+    slideShowBehaviour();
 })
 
 /** handles the independent behaviour of the return to top of page button */
@@ -66,7 +68,7 @@ function mobileMenuBehaviour(){
 
 
     
-    menuEnabled = null;
+    menuEnabled = false;
     if(mobileMenu.style.display === 'none'){
         menuEnabled = false;
     } else menuEnabled = true;
@@ -84,4 +86,63 @@ function mobileMenuBehaviour(){
         document.body.style.overflow = 'hidden'; // restricts scrolling
     }
     
+}
+
+
+// possible to be retreived from a backend in the future
+const headingImgs = ["../img/headers/header-1.jpg",
+                     "../img/headers/header-2.jpg",
+                     "../img/headers/header-3.jpg"];
+
+
+/** draws the header image bubble based on the array of header images */
+function drawHeaderImgBubbles(){
+    const imgBubbleContainer = document.getElementById("imgBubbleSelector");
+    if(headingImgs.length <= 1) return; // do not include bubble if 1 or no images
+
+    for(let i = 0; i < headingImgs.length; i ++){
+        let imgBubble = document.createElement('div');
+        imgBubble.className = "imgBubble";
+        imgBubble.id = "imgBubble-" + i;
+        imgBubbleContainer.append(imgBubble);
+
+    }
+}
+
+/** fixes the colour of the header image bubbles based on the index of the 
+ * currently displayed image */
+function fixHeaderImgBubbles(currentlyDisplayedIndex){
+    // set all bubbles to blank except the current one, which should be coloured
+    for(let i = 0; i < headingImgs.length; i ++){
+        let imgBubble = document.getElementById("imgBubble-" + i);
+        
+        if(i == currentlyDisplayedIndex){ // THIS ONE NEEDS TO BE COLOURED
+            imgBubble.style.backgroundColor = "var(--colour-one)";
+        } else {
+            imgBubble.style.backgroundColor = "white";
+        }
+    }
+}
+
+/** handles the heading slideshow behaviour */
+function slideShowBehaviour(){
+
+    const TIME_BETWEEN_IMAGES = 10000 // in milliseconds
+    const heading = document.getElementById("heading");
+
+    let headingImgsIndex = 0;
+
+    function nextImage(){
+        heading.style.backgroundImage = "url(" + headingImgs[headingImgsIndex] + ")";
+        fixHeaderImgBubbles(headingImgsIndex);
+
+        headingImgsIndex ++;
+        if(headingImgsIndex >= headingImgs.length){
+            headingImgsIndex = 0;
+        }
+    }
+
+    nextImage();
+
+    setInterval(nextImage, TIME_BETWEEN_IMAGES); // triggers the next image after given time period
 }
