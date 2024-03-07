@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     returnArrowBehaviour();
     drawHeaderImgBubbles()
     slideShowBehaviour();
+    populateTeamSection();
 })
 
 /** handles the independent behaviour of the return to top of page button */
@@ -145,4 +146,36 @@ function slideShowBehaviour(){
     nextImage();
 
     setInterval(nextImage, TIME_BETWEEN_IMAGES); // triggers the next image after given time period
+}
+
+// possible to be retreived from a backend in the future
+const employeesJSON = {"employees": [{'id':1, 'name':'Liam Bell', 'imgUrl':'img/team/liam-1.jpg'},
+                                 {'id':2, 'name':'Mitch Bell', 'imgUrl':'img/team/mitch-1.jpg'},
+                                 {'id':3, 'name':'Nathan', 'imgUrl':'img/team/nathan-1.jpg'},
+                                 {'id':4, 'name':'Ryan', 'imgUrl':'img/team/ryan-1.jpg'},
+                                ]};
+
+/** populates the "meat the team" section with the employeesJSON */
+function populateTeamSection(){
+    const teamContainer = document.getElementById("teamBoxContents");
+
+    employeesJSON.employees.forEach(employee => {
+        let teamMemberBox = document.createElement('div');
+        teamMemberBox.className = "teamMember";
+
+        // add the image
+        let teamMemberImg = document.createElement('img');
+        teamMemberImg.className = "teamMemberImg";
+        teamMemberImg.src = employee.imgUrl;
+        teamMemberBox.append(teamMemberImg);
+
+        // add the name
+        let teamMemberName = document.createElement('div');
+        teamMemberName.className = "text";
+        teamMemberName.append(employee.name);
+        teamMemberBox.append(teamMemberName);
+
+        // add the new box to the container
+        teamContainer.append(teamMemberBox);
+    })
 }
