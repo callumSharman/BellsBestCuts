@@ -128,7 +128,7 @@ function fixHeaderImgBubbles(currentlyDisplayedIndex){
 /** handles the heading slideshow behaviour */
 function slideShowBehaviour(){
 
-    const TIME_BETWEEN_IMAGES = 10000 // in milliseconds
+    const TIME_BETWEEN_IMAGES = 7000 // in milliseconds
     const heading = document.getElementById("heading");
 
     let headingImgsIndex = 0;
