@@ -1,5 +1,8 @@
 .teamBox{
-    padding: 30px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
     background-color: var(--colour-three);
 }
 
@@ -8,7 +11,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 40px;
 }
 
 .teamBoxHeading{
@@ -19,7 +21,6 @@
 }
 
 .teamBoxTitle{
-    padding-right: 60px;
     padding-left: 30%;
 }
 
@@ -34,4 +35,10 @@
 .teamMemberImg{
     width: 90%;
     padding: 15px;
+}
+
+@media(max-width:768px) {
+    .teamBox{
+        padding: 30px;
+    }
 }

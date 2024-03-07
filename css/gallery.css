@@ -1,0 +1,35 @@
+.galleryImgs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.galleryImg{
+    width:auto;
+    height:200px;
+    padding: 5px;
+}
+
+.gallery{
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.galleryTitle{
+    padding-left: 30%;
+}
+
+.galleryHeading{
+    color:rgb(255, 255, 255);
+    font-size: 26pt;
+    font-family: var(--font-family-two);
+    text-align: right;
+}
+
+@media(max-width:768px) {
+    .gallery{
+        padding: 30px;
+    }
+}
