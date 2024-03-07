@@ -1,0 +1,35 @@
+.teamBox{
+
+    padding: 30px;
+    background-color: var(--colour-three);
+}
+
+.teamBoxImageContainer{
+    width: 40%; display: flex; justify-content: center; align-items: center;
+}
+
+.teamBoxTeamImage{
+    width: 70%;
+}
+
+.teamBoxContents{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.teamBoxHeading{
+    color:rgb(255, 255, 255);
+    font-size: 26pt;
+    font-family: var(--font-family-two);
+    text-align: right;
+}
+
+.teamMember{
+    width: 200px;
+}
+
+.teamMemberImg{
+    width: 100%;
+}
