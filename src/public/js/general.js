@@ -1,3 +1,5 @@
+import { getGallery, getHeadingImgs } from "./data.js";
+
 document.addEventListener('DOMContentLoaded', () => {
     returnArrowBehaviour();
     drawHeaderImgBubbles()
@@ -11,7 +13,7 @@ function returnArrowBehaviour(){
 
     const returnArrow = document.getElementById("returnArrow");
 
-    alreadyAdded = false; // is the arrow already on screen?
+    let alreadyAdded = false; // is the arrow already on screen?
 
     window.addEventListener('scroll', ()=>{
         if(window.innerWidth <= 768){ // DONT DISPLAY IN MOBILE MODE
@@ -89,32 +91,30 @@ function mobileMenuBehaviour(){
     
 }
 
-
-// possible to be retreived from a backend in the future
-const headingImgs = ["../img/headers/header-1.jpg",
-                     "../img/headers/header-2.jpg",
-                     "../img/headers/header-3.jpg"];
-
-
 /** draws the header image bubble based on the array of header images */
 function drawHeaderImgBubbles(){
-    const imgBubbleContainer = document.getElementById("imgBubbleSelector");
-    if(headingImgs.length <= 1) return; // do not include bubble if 1 or no images
 
-    for(let i = 0; i < headingImgs.length; i ++){
-        let imgBubble = document.createElement('div');
-        imgBubble.className = "imgBubble";
-        imgBubble.id = "imgBubble-" + i;
-        imgBubbleContainer.append(imgBubble);
+    // find the number of images first before drawing
+    getHeadingImgs()
+        .then(imgNames => {
+            const imgBubbleContainer = document.getElementById("imgBubbleSelector");
+            if(imgNames.length <= 1) return; // do not include bubble if 1 or no images
 
-    }
+            for(let i = 0; i < imgNames.length; i ++){
+                let imgBubble = document.createElement('div');
+                imgBubble.className = "imgBubble";
+                imgBubble.id = "imgBubble-" + i;
+                imgBubbleContainer.append(imgBubble);
+
+            }
+        })
 }
 
 /** fixes the colour of the header image bubbles based on the index of the 
  * currently displayed image */
-function fixHeaderImgBubbles(currentlyDisplayedIndex){
+function fixHeaderImgBubbles(currentlyDisplayedIndex, numImages){
     // set all bubbles to blank except the current one, which should be coloured
-    for(let i = 0; i < headingImgs.length; i ++){
+    for(let i = 0; i < numImages; i ++){
         let imgBubble = document.getElementById("imgBubble-" + i);
         
         if(i == currentlyDisplayedIndex){ // THIS ONE NEEDS TO BE COLOURED
@@ -127,25 +127,33 @@ function fixHeaderImgBubbles(currentlyDisplayedIndex){
 
 /** handles the heading slideshow behaviour */
 function slideShowBehaviour(){
-
-    const TIME_BETWEEN_IMAGES = 7000 // in milliseconds
+    const pathToImgs = "../img/headers/";
+    const TIME_BETWEEN_IMAGES = 3000 // in milliseconds
     const heading = document.getElementById("heading");
 
-    let headingImgsIndex = 0;
+    // retrieve the heading images names first
+    getHeadingImgs()
+        .then(imgNames => {
+            let imgPaths = imgNames.map(imgName => pathToImgs + imgName);
+            return imgPaths;
+        })
+        .then(headingImgs => {
+            let headingImgsIndex = 0;
 
-    function nextImage(){
-        heading.style.backgroundImage = "url(" + headingImgs[headingImgsIndex] + ")";
-        fixHeaderImgBubbles(headingImgsIndex);
-
-        headingImgsIndex ++;
-        if(headingImgsIndex >= headingImgs.length){
-            headingImgsIndex = 0;
-        }
-    }
-
-    nextImage();
-
-    setInterval(nextImage, TIME_BETWEEN_IMAGES); // triggers the next image after given time period
+            function nextImage(){
+                heading.style.backgroundImage = "url(" + headingImgs[headingImgsIndex] + ")";
+                fixHeaderImgBubbles(headingImgsIndex, headingImgs.length);
+        
+                headingImgsIndex ++;
+                if(headingImgsIndex >= headingImgs.length){
+                    headingImgsIndex = 0;
+                }
+            }
+        
+            nextImage();
+        
+            setInterval(nextImage, TIME_BETWEEN_IMAGES); // triggers the next image after given time period
+        })
 }
 
 // possible to be retreived from a backend in the future
