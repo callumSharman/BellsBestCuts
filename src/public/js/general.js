@@ -20,7 +20,7 @@ function returnArrowBehaviour(){
             returnArrow.style.display = "none";
             alreadyAdded = false;
         } else {
-            currScrollStatus = window.scrollY;
+            let currScrollStatus = window.scrollY;
 
             if((currScrollStatus >= APPEARANCE_HEIGHT) && !alreadyAdded){
                 returnArrow.style.display = "flex";
@@ -50,7 +50,7 @@ function returnArrowBehaviour(){
 }
 
 /** handles the onClick behaviour of the return to top of page button */
-function returnArrowOnClick(){
+export function returnArrowOnClick(){
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }

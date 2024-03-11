@@ -16,7 +16,7 @@ function getData(url, reqHeaders) {
 export function getGallery(){
     return getData('/api/gallery')
         .then(data => {
-            /////////////////
+            return data;
         })
 }
 

@@ -17,18 +17,18 @@
         <link rel="stylesheet" href="css/teamSection.css">
         <link rel="stylesheet" href="css/gallery.css">
 
+
         <!-- Scripts -->
-        <script type="module" src="js/data.js" defer></script>
+        <script src="js/headerFooter.js" defer></script>
         <script type="module" src="js/general.js" defer></script>
 
     </head>
     <body>
         <!-- HEADER -->
-        <script src="js/headerFooter.js"></script>
-
+    
 
         <!-- RETURN ARROW -->
-        <div class="returnArrow" id="returnArrow" onclick="returnArrowOnClick()">
+        <div class="returnArrow" id="returnArrow">
             <div class="arrow">
                 ^
             </div>
@@ -215,6 +215,16 @@
             </div>
         </div>
 
+
+        <!-- SCRIPTS -->
+        <script type="module">
+
+            // add button functionality
+            import { returnArrowOnClick } from "./js/general.js";
+            const returnArrow = document.getElementById("returnArrow");
+
+            returnArrow.onclick = returnArrowOnClick;
+        </script>
 
         <!-- FOOTER -->
 
