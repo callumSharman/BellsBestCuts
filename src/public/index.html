@@ -19,7 +19,7 @@
 
 
         <!-- Scripts -->
-        <script src="js/headerFooter.js" defer></script>
+        <script type="module" src="js/headerFooter.js" defer></script>
         <script type="module" src="js/general.js" defer></script>
 
     </head>
@@ -90,22 +90,8 @@
                                 <div class="galleryHeading"><b>GALLERY</b></div>
                                 <hr class="divider" style="margin-bottom: 20px;">
                             </div>
-                            <div class="galleryImgs">
-                                <img class="galleryImg" src="img/gallery/meat-2.jpg">
-                                <img class="galleryImg" src="img/gallery/liam-1.jpg">
-                                <img class="galleryImg" src="img/gallery/nathan-1.jpg">
-                                <img class="galleryImg" src="img/gallery/meat-1.jpg">
-                                <img class="galleryImg" src="img/gallery/mitch-1.jpg">
-                                <img class="galleryImg" src="img/gallery/liam-2.jpg">
-                                <img class="galleryImg" src="img/gallery/shop-1.jpg">
-                                <img class="galleryImg" src="img/gallery/ryan-1.jpg">
-                                <img class="galleryImg" src="img/gallery/team-1.jpg">
-                                <img class="galleryImg" src="img/gallery/nathan-2.jpg">
-                                <img class="galleryImg" src="img/gallery/meat-3.jpg">
-                                <img class="galleryImg" src="img/gallery/shop-2.jpg">
-                                <img class="galleryImg" src="img/gallery/mitch-2.jpg">
-                                <img class="galleryImg" src="img/gallery/nathan-3.jpg">
-                                <img class="galleryImg" src="img/gallery/meat-4.jpg">
+                            <div class="galleryImgs" id="galleryImgs">
+                                
                             </div>
                             <div class="text" style="padding-right: 40px; text-align: right;"> more -> (hyperlink)</div>
                         </div>
@@ -224,6 +210,7 @@
             const returnArrow = document.getElementById("returnArrow");
 
             returnArrow.onclick = returnArrowOnClick;
+
         </script>
 
         <!-- FOOTER -->

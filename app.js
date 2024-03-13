@@ -9,7 +9,7 @@ const fs = require('fs');
 app.use(express.static(path.join(__dirname, '/src/public')));
 
 
-/** GET: returns an array of image names */
+/** GET: returns an array of gallery image names */
 const galleryDir = path.join(__dirname, '/src/public/img/gallery');
 app.get('/api/gallery', (req, res) => {
     fs.readdir(galleryDir, (err, files) => {
@@ -22,7 +22,7 @@ app.get('/api/gallery', (req, res) => {
 })
 
 
-/** GET: returns an array of image names */
+/** GET: returns an array of heading image names */
 const headingImgDir = path.join(__dirname, '/src/public/img/headers');
 app.get('/api/headingImg', (req, res) => {
     fs.readdir(headingImgDir, (err, files) => {
@@ -36,7 +36,7 @@ app.get('/api/headingImg', (req, res) => {
 
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, '/src/public/index.html'));
 });
 
 

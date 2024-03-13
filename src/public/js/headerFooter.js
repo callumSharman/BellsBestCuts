@@ -1,4 +1,7 @@
 /** adds the content from header.html and from footer.html to the webpage once loaded */
+
+import { scrollDownTo, mobileMenuBehaviour } from "./general.js";
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // Fetch the header.html content
@@ -7,10 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             document.body.insertAdjacentHTML('afterbegin', data);
         })
-        .then(()=>{
+        .then(() => {
             // activate header behaviour
             headerBehaviour();
             progBarBehaviour();
+        })
+        .then(() => {
+            // set up the header button functions
+            addHeaderButtonFuncs();
         })
 
     fetch('html/footer.html')
@@ -27,10 +34,10 @@ function headerBehaviour(){
 
     const header = document.getElementById('appHeader');
     const progBar = document.getElementById('progBar');
-    prevScrollStatus = 0; // this will always start at 0
+    let prevScrollStatus = 0; // this will always start at 0
     
     window.addEventListener('scroll', ()=>{
-        currScrollStatus = window.scrollY;
+        let currScrollStatus = window.scrollY;
 
         const headerTopValue = window.getComputedStyle(header).getPropertyValue('top');
         const headerOldTop = parseInt(headerTopValue.slice(0,-2)); // take off the 'px'
@@ -77,11 +84,23 @@ function progBarBehaviour(){
     
         const windowHeight = window.innerHeight;
         
-        currScrollStatus = window.scrollY;
+        let currScrollStatus = window.scrollY;
 
         progBar.style.width = ((currScrollStatus)/(totalDocumentHeight - windowHeight) * 100) + '%';
 
 
         //console.log((currScrollStatus+windowHeight)/totalDocumentHeight * 100);
     })
+}
+
+/** adds functionality to the header buttons */
+function addHeaderButtonFuncs(){
+    const aboutSectionButton = document.getElementById("aboutSectionButton");
+    aboutSectionButton.onclick = () => { scrollDownTo("aboutSection"); };
+
+    const contactSectionButton = document.getElementById("contactSectionButton");
+    contactSectionButton.onclick = () => { scrollDownTo("contactSection"); };
+
+    const mobileMenuButton = document.getElementById("menuButton");
+    mobileMenuButton.onclick = () => { mobileMenuBehaviour(); };
 }

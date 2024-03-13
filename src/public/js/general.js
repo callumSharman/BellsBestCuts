@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     drawHeaderImgBubbles()
     slideShowBehaviour();
     populateTeamSection();
+    populateGallery();
 })
 
 /** handles the independent behaviour of the return to top of page button */
@@ -56,7 +57,7 @@ export function returnArrowOnClick(){
 }
 
 /** smoothly scrolls straight to the section with the given id */
-function scrollDownTo(sectionId){
+export function scrollDownTo(sectionId){
     const section = document.getElementById(sectionId);
     if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
@@ -64,14 +65,14 @@ function scrollDownTo(sectionId){
 }
 
 /** handles the behaviour related to the sliding down menu in mobile mode */
-function mobileMenuBehaviour(){
+export function mobileMenuBehaviour(){
     const mobileMenu = document.getElementById("mobileMenu");
     const meunButtonX = document.getElementById("menuButtonX");
     const menuButtonSymbol = document.getElementById("menuButtonSymbol");
 
 
     
-    menuEnabled = false;
+    let menuEnabled = false;
     if(mobileMenu.style.display === 'none'){
         menuEnabled = false;
     } else menuEnabled = true;
@@ -128,7 +129,7 @@ function fixHeaderImgBubbles(currentlyDisplayedIndex, numImages){
 /** handles the heading slideshow behaviour */
 function slideShowBehaviour(){
     const pathToImgs = "../img/headers/";
-    const TIME_BETWEEN_IMAGES = 3000 // in milliseconds
+    const TIME_BETWEEN_IMAGES = 10000 // in milliseconds
     const heading = document.getElementById("heading");
 
     // retrieve the heading images names first
@@ -159,8 +160,7 @@ function slideShowBehaviour(){
 // possible to be retreived from a backend in the future
 const employeesJSON = {"employees": [{'id':1, 'name':'Liam Bell', 'imgUrl':'img/team/liam-1.jpg'},
                                  {'id':2, 'name':'Mitch Bell', 'imgUrl':'img/team/mitch-1.jpg'},
-                                 {'id':3, 'name':'Nathan', 'imgUrl':'img/team/nathan-1.jpg'},
-                                 {'id':4, 'name':'Ryan', 'imgUrl':'img/team/ryan-1.jpg'},
+                                 {'id':3, 'name':'Nathan Sharman', 'imgUrl':'img/team/nathan-1.jpg'},
                                 ]};
 
 /** populates the "meat the team" section with the employeesJSON */
@@ -186,4 +186,31 @@ function populateTeamSection(){
         // add the new box to the container
         teamContainer.append(teamMemberBox);
     })
+}
+
+
+const galleryJSON = {"images": [{'imgUrl':'img/gallery/meat-2.jpg'},
+                                {'imgUrl':'img/gallery/liam-1.jpg'},
+                                {'imgUrl':'img/gallery/nathan-1.jpg'},
+                                {'imgUrl':'img/gallery/meat-1.jpg'},
+                                {'imgUrl':'img/gallery/mitch-1.jpg'},
+                                {'imgUrl':'img/gallery/liam-2.jpg'},
+                                {'imgUrl':'img/gallery/shop-1.jpg'}]
+}
+
+/** populates the image gallery from the src/public/img/gallery folder */
+function populateGallery(){
+    const pathToImgs = "../img/gallery/";
+    const imgContainer = document.getElementById("galleryImgs");
+
+    getGallery()
+        .then(imgNames => {
+            imgNames.forEach(img => {
+                let imgHTML = document.createElement('img');
+                imgHTML.className = 'galleryImg';
+                imgHTML.src = pathToImgs + img;
+        
+                imgContainer.append(imgHTML);
+            })
+        });
 }
