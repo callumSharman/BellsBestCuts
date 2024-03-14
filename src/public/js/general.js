@@ -1,4 +1,4 @@
-import { getGallery, getHeadingImgs } from "./data.js";
+import { getGallery, getHeadingImgs, getTeamImgNames } from "./data.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     returnArrowBehaviour();
@@ -166,37 +166,53 @@ const employeesJSON = {"employees": [{'id':1, 'name':'Liam Bell', 'imgUrl':'img/
 /** populates the "meat the team" section with the employeesJSON */
 function populateTeamSection(){
     const teamContainer = document.getElementById("teamBoxContents");
+    const pathToImgs = "../img/team/";
 
-    employeesJSON.employees.forEach(employee => {
-        let teamMemberBox = document.createElement('div');
-        teamMemberBox.className = "teamMember";
+    getTeamImgNames()
+        .then(teamImgNames => {
+            teamImgNames.forEach(imgName => {
+                let teamMemberBox = document.createElement('div');
+                teamMemberBox.className = "teamMember";
+        
+                // add the image
+                let teamMemberImg = document.createElement('img');
+                teamMemberImg.className = "teamMemberImg";
+                teamMemberImg.src = pathToImgs + imgName;
+                teamMemberBox.append(teamMemberImg);
+        
+                // add the name
+                let teamMemberName = document.createElement('div');
+                teamMemberName.className = "text";
+                teamMemberName.append(imgName);
+                teamMemberBox.append(teamMemberName);
+        
+                // add the new box to the container
+                teamContainer.append(teamMemberBox);
+            });
+        });
 
-        // add the image
-        let teamMemberImg = document.createElement('img');
-        teamMemberImg.className = "teamMemberImg";
-        teamMemberImg.src = employee.imgUrl;
-        teamMemberBox.append(teamMemberImg);
+    // employeesJSON.employees.forEach(employee => {
+    //     let teamMemberBox = document.createElement('div');
+    //     teamMemberBox.className = "teamMember";
 
-        // add the name
-        let teamMemberName = document.createElement('div');
-        teamMemberName.className = "text";
-        teamMemberName.append(employee.name);
-        teamMemberBox.append(teamMemberName);
+    //     // add the image
+    //     let teamMemberImg = document.createElement('img');
+    //     teamMemberImg.className = "teamMemberImg";
+    //     teamMemberImg.src = employee.imgUrl;
+    //     teamMemberBox.append(teamMemberImg);
 
-        // add the new box to the container
-        teamContainer.append(teamMemberBox);
-    })
+    //     // add the name
+    //     let teamMemberName = document.createElement('div');
+    //     teamMemberName.className = "text";
+    //     teamMemberName.append(employee.name);
+    //     teamMemberBox.append(teamMemberName);
+
+    //     // add the new box to the container
+    //     teamContainer.append(teamMemberBox);
+    // })
 }
 
 
-const galleryJSON = {"images": [{'imgUrl':'img/gallery/meat-2.jpg'},
-                                {'imgUrl':'img/gallery/liam-1.jpg'},
-                                {'imgUrl':'img/gallery/nathan-1.jpg'},
-                                {'imgUrl':'img/gallery/meat-1.jpg'},
-                                {'imgUrl':'img/gallery/mitch-1.jpg'},
-                                {'imgUrl':'img/gallery/liam-2.jpg'},
-                                {'imgUrl':'img/gallery/shop-1.jpg'}]
-}
 
 /** populates the image gallery from the src/public/img/gallery folder */
 function populateGallery(){
