@@ -112,7 +112,7 @@ function drawHeaderImgBubbles(){
 }
 
 /** fixes the colour of the header image bubbles based on the index of the 
- * currently displayed image */
+ *  currently displayed image */
 function fixHeaderImgBubbles(currentlyDisplayedIndex, numImages){
     // set all bubbles to blank except the current one, which should be coloured
     for(let i = 0; i < numImages; i ++){
@@ -183,35 +183,49 @@ function populateTeamSection(){
                 // add the name
                 let teamMemberName = document.createElement('div');
                 teamMemberName.className = "text";
-                teamMemberName.append(imgName);
+                teamMemberName.append(nameFromImgName(imgName));
                 teamMemberBox.append(teamMemberName);
         
                 // add the new box to the container
                 teamContainer.append(teamMemberBox);
+                
             });
         });
-
-    // employeesJSON.employees.forEach(employee => {
-    //     let teamMemberBox = document.createElement('div');
-    //     teamMemberBox.className = "teamMember";
-
-    //     // add the image
-    //     let teamMemberImg = document.createElement('img');
-    //     teamMemberImg.className = "teamMemberImg";
-    //     teamMemberImg.src = employee.imgUrl;
-    //     teamMemberBox.append(teamMemberImg);
-
-    //     // add the name
-    //     let teamMemberName = document.createElement('div');
-    //     teamMemberName.className = "text";
-    //     teamMemberName.append(employee.name);
-    //     teamMemberBox.append(teamMemberName);
-
-    //     // add the new box to the container
-    //     teamContainer.append(teamMemberBox);
-    // })
 }
 
+/** returns the name of an employee from their image name
+ *  underscores become spaces and content after a full stop is removed. 
+ *  All words begin with a captial */
+function nameFromImgName(imgName){
+    let imgNameLower = imgName.toLowerCase();
+
+    let name = '';
+
+    let prevChar = null;
+
+    for(let i = 0; i < imgName.length; i ++){
+        let currChar = imgNameLower.charAt(i);
+
+        if(!isNaN(parseInt(currChar))){ // the char is a number so ignore it
+            continue;
+        } else if(currChar === '_'){
+            if(prevChar === null){continue;} // don't need a space at the start
+            else if(prevChar === '_'){continue;} // don't need two spaces in a row
+            else{name += ' ';}
+        } else if(currChar === '.'){ // ignore the file type
+            break;
+        } else { // normal letter
+            if((prevChar === null) || (prevChar === '_')){ // first letter of a word
+                name += currChar.toUpperCase();
+            } else{ // not first letter of a word
+                name += currChar;
+            }
+        }
+
+        prevChar = currChar;
+    }
+    return name;
+}
 
 
 /** populates the image gallery from the src/public/img/gallery folder */
