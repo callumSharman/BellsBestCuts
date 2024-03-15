@@ -63,7 +63,7 @@ function headerBehaviour(){
                 
                 //header.style.top = headerOldTop + travelAmt + 'px'; // push header down
                 header.style.top = 0 + 'px'; // push header down
-                progBar.style.top = 52 + 'px';
+                progBar.style.top = 42 + 'px';
             }
         }
 

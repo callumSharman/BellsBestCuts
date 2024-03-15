@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     drawHeaderImgBubbles()
     slideShowBehaviour();
     populateTeamSection();
-    populateGallery();
+    populateGallery(15);
 })
 
 /** handles the independent behaviour of the return to top of page button */
@@ -157,12 +157,6 @@ function slideShowBehaviour(){
         })
 }
 
-// possible to be retreived from a backend in the future
-const employeesJSON = {"employees": [{'id':1, 'name':'Liam Bell', 'imgUrl':'img/team/liam-1.jpg'},
-                                 {'id':2, 'name':'Mitch Bell', 'imgUrl':'img/team/mitch-1.jpg'},
-                                 {'id':3, 'name':'Nathan Sharman', 'imgUrl':'img/team/nathan-1.jpg'},
-                                ]};
-
 /** populates the "meat the team" section with the employeesJSON */
 function populateTeamSection(){
     const teamContainer = document.getElementById("teamBoxContents");
@@ -208,14 +202,14 @@ function nameFromImgName(imgName){
 
         if(!isNaN(parseInt(currChar))){ // the char is a number so ignore it
             continue;
-        } else if(currChar === '_'){
+        } else if((currChar === '_') || (currChar === ' ')){
             if(prevChar === null){continue;} // don't need a space at the start
             else if(prevChar === '_'){continue;} // don't need two spaces in a row
             else{name += ' ';}
         } else if(currChar === '.'){ // ignore the file type
             break;
         } else { // normal letter
-            if((prevChar === null) || (prevChar === '_')){ // first letter of a word
+            if((prevChar === null) || (prevChar === '_') || (prevChar === ' ')){ // first letter of a word
                 name += currChar.toUpperCase();
             } else{ // not first letter of a word
                 name += currChar;
@@ -228,19 +222,25 @@ function nameFromImgName(imgName){
 }
 
 
-/** populates the image gallery from the src/public/img/gallery folder */
-function populateGallery(){
+/** populates the image gallery from the src/public/img/gallery folder. If 'maxNumImages' is set to -1 then the max number will be added */
+function populateGallery(maxNumImages){
     const pathToImgs = "../img/gallery/";
     const imgContainer = document.getElementById("galleryImgs");
 
     getGallery()
         .then(imgNames => {
-            imgNames.forEach(img => {
+
+            if(maxNumImages < 0){maxNumImages = imgNames.length}; // show all images
+            if(maxNumImages > imgNames.length){maxNumImages = imgNames.length}; // don't go over the number of images
+
+            for(let i = 0; i < maxNumImages; i ++){
+                let img = imgNames[i];
+
                 let imgHTML = document.createElement('img');
                 imgHTML.className = 'galleryImg';
                 imgHTML.src = pathToImgs + img;
         
                 imgContainer.append(imgHTML);
-            })
+            }
         });
 }

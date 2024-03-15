@@ -33,7 +33,7 @@ body {
 
 .text{
     color:rgb(255, 255, 255);
-    font-size: 16pt;
+    font-size: 14pt;
     font-family: var(--font-family-one);
 }
 
@@ -41,12 +41,12 @@ body {
     display: flex;
     flex-direction: row;
     height: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .faceBookPost{
-    width:32%;
+    width:31%;
     height:500px;
     border:none;
     overflow:hidden;

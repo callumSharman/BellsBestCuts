@@ -1,8 +1,8 @@
 .aboutBox{
     display: flex;
     flex-direction: row;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    padding-bottom: 60px;
+    padding-top: 60px;
 }
 
 .aboutBoxSection1{
@@ -21,7 +21,7 @@
 }
 
 .aboutSectionImg{
-    width:70%;
+    width:50%;
     height:auto;
     padding-top:20px;
     padding-bottom:30px;
@@ -36,13 +36,13 @@
 
 .aboutText{
     color:rgb(255, 255, 255);
-    font-size: 20px;
+    font-size: 16px;
     font-family: var(--font-family-one);
     padding-bottom: 35px;
 }
 
 .emphasisAboutText{
     color: rgb(167, 122, 86);
-    font-size: 24px;
+    font-size: 20px;
     font-family: var(--font-family-one);
 }

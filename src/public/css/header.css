@@ -1,5 +1,5 @@
 .header, .headerContents{
-    height: 52px;
+    height: 42px;
 }
 .header{
     color: white;
@@ -14,7 +14,7 @@
 .progBar{
     height: 6px;
     width:0%;
-    top:52px;
+    top:42px;
     background-color: var(--colour-two);
     position: fixed;
     z-index: 11;
@@ -67,7 +67,7 @@
     position: relative;
     left:-4px;
     top:28px;
-    width:100px; 
+    width:90px; 
     border: solid;
     border-radius: 50%;
     border-width: 6px;
