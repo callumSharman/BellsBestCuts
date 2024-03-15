@@ -31,6 +31,10 @@ body {
     position: relative;
 }
 
+.divider{
+    border-color: rgb(180, 180, 180);
+}
+
 .text{
     color:rgb(255, 255, 255);
     font-size: 14pt;
@@ -76,17 +80,51 @@ body {
 }
 
 .reviewsContainer{
-    height: 500px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.reviewContainerContainer{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .reviewContainer{
+    width: 250px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.reviewsHeading{
+    color:rgb(255, 255, 255);
+    font-size: 26pt;
+    font-family: var(--font-family-two);
+    text-align: right;
+}
+
+.reviewsTitle{
+    padding-left: 30%;
+}
+
+.reviewText{
+    color:rgb(190, 190, 190);
+    font-size: 15px;
+    font-family: var(--font-family-one);
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.quotationMark{
+    width: 35px;
+    padding-bottom: 30px;
 }
 
 @media(min-width:1280px){

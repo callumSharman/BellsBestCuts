@@ -17,11 +17,11 @@
     color:rgb(255, 255, 255);
     font-size: 26pt;
     font-family: var(--font-family-two);
-    text-align: right;
+    text-align: left;
 }
 
 .teamBoxTitle{
-    padding-left: 30%;
+    padding-right: 30%;
 }
 
 .teamMember{

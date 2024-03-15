@@ -16,7 +16,7 @@
     flex-direction: row;
 }
 
-.socialIcon{  /* in-line with facebook and instragrams guidelines */
+.socialMediaIcon{  /* in-line with facebook and instragrams guidelines */
     width:35px;
     padding: 18px;
     cursor: pointer;
