@@ -34,4 +34,7 @@
     .gallery{
         padding: 30px;
     }
+    .galleryImg{
+        height:170px;
+    }
 }
