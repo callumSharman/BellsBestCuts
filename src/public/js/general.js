@@ -1,15 +1,7 @@
 import { getGallery, getHeadingImgs, getTeamImgNames } from "./data.js";
 
-document.addEventListener('DOMContentLoaded', () => {
-    returnArrowBehaviour();
-    drawHeaderImgBubbles()
-    slideShowBehaviour();
-    populateTeamSection();
-    populateGallery(15);
-})
-
 /** handles the independent behaviour of the return to top of page button */
-function returnArrowBehaviour(){
+export function returnArrowBehaviour(){
     const APPEARANCE_HEIGHT = 600; // height at which the return arrow appears (pixels)
 
     const returnArrow = document.getElementById("returnArrow");
@@ -93,7 +85,7 @@ export function mobileMenuBehaviour(){
 }
 
 /** draws the header image bubble based on the array of header images */
-function drawHeaderImgBubbles(){
+export function drawHeaderImgBubbles(){
 
     // find the number of images first before drawing
     getHeadingImgs()
@@ -127,7 +119,7 @@ function fixHeaderImgBubbles(currentlyDisplayedIndex, numImages){
 }
 
 /** handles the heading slideshow behaviour */
-function slideShowBehaviour(){
+export function slideShowBehaviour(){
     const pathToImgs = "../img/headers/";
     const TIME_BETWEEN_IMAGES = 10000 // in milliseconds
     const heading = document.getElementById("heading");
@@ -158,7 +150,7 @@ function slideShowBehaviour(){
 }
 
 /** populates the "meat the team" section with the employeesJSON */
-function populateTeamSection(){
+export function populateTeamSection(){
     const teamContainer = document.getElementById("teamBoxContents");
     const pathToImgs = "../img/team/";
 
@@ -223,7 +215,7 @@ function nameFromImgName(imgName){
 
 
 /** populates the image gallery from the src/public/img/gallery folder. If 'maxNumImages' is set to -1 then the max number will be added */
-function populateGallery(maxNumImages){
+export function populateGallery(maxNumImages){
     const pathToImgs = "../img/gallery/";
     const imgContainer = document.getElementById("galleryImgs");
 

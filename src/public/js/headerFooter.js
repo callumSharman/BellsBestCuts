@@ -95,11 +95,27 @@ function progBarBehaviour(){
 
 /** adds functionality to the header buttons */
 function addHeaderButtonFuncs(){
-    const aboutSectionButton = document.getElementById("aboutSectionButton");
-    aboutSectionButton.onclick = () => { scrollDownTo("aboutSection"); };
 
-    const contactSectionButton = document.getElementById("contactSectionButton");
-    contactSectionButton.onclick = () => { scrollDownTo("contactSection"); };
+    if(document.title == "Bell's Best Cuts"){
+        const aboutSectionButton = document.getElementById("aboutSectionButton");
+        aboutSectionButton.onclick = () => { scrollDownTo("aboutSection"); };
+
+        const contactSectionButton = document.getElementById("contactSectionButton");
+        contactSectionButton.onclick = () => { scrollDownTo("contactSection"); };
+
+    } else if (document.title == "Bell's Best Cuts | Gallery"){
+        const aboutSectionButton = document.getElementById("aboutSectionButton");
+        aboutSectionButton.onclick = () => {
+            location.href='index.html#aboutSection'; // must first redirect;
+        };
+
+        const contactSectionButton = document.getElementById("contactSectionButton");
+        contactSectionButton.onclick = () => {
+            location.href='index.html#contactSection'; // must first redirect
+
+        };
+
+    }
 
     const mobileMenuButton = document.getElementById("menuButton");
     mobileMenuButton.onclick = () => { mobileMenuBehaviour(); };

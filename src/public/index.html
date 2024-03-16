@@ -47,7 +47,8 @@
         <div class="heading" id="heading">
             <div class="headingContents">
                 <img src="img/misc/logo_v3.png" style="width:500px">
-                <div class="imgBubbleSelector" id="imgBubbleSelector"> <!-- holds the image bubbles -->
+                <div class="imgBubbleSelector" id="imgBubbleSelector"> 
+                    <!-- holds the image bubbles -->
                 </div>
             </div>
         </div>
@@ -100,7 +101,7 @@
                             <div class="galleryImgs" id="galleryImgs">
                                 
                             </div>
-                            <button>Enquire Here</button>
+                            <button onclick="location.href='gallery.html';">View more</button>
                         </div>
                     </div>
                 </div>
@@ -230,6 +231,21 @@
 
 
         <!-- SCRIPTS -->
+        <script type="module">
+            import { returnArrowBehaviour,  
+                     drawHeaderImgBubbles, 
+                     slideShowBehaviour, 
+                     populateTeamSection, 
+                     populateGallery } from "./js/general.js";
+
+            document.addEventListener('DOMContentLoaded', () => {
+                returnArrowBehaviour();
+                drawHeaderImgBubbles()
+                slideShowBehaviour();
+                populateTeamSection();
+                populateGallery(15);
+            })
+        </script>
         <script type="module">
 
             // add button functionality
