@@ -3,6 +3,7 @@
     flex-direction: row;
     padding-bottom: 60px;
     padding-top: 60px;
+    padding-right:60px;
 }
 
 .aboutBoxSection1{
@@ -15,7 +16,6 @@
 .aboutBoxSection2{
     width:60%;
     background-color: var(--colour-one);
-    padding-right:60px;
     padding-top:20px;
     padding-bottom:30px;
 }
@@ -45,4 +45,20 @@
     color: rgb(167, 122, 86);
     font-size: 20px;
     font-family: var(--font-family-one);
+}
+
+@media(max-width:768px) {
+    .aboutBox{
+        flex-direction: column;
+        padding-left: 60px;
+    }
+    .aboutBoxSection1{
+        width:100%;
+    }
+    .aboutBoxSection2{
+        width:100%
+    }
+    .aboutSectionImg{
+        display: none;
+    }
 }
