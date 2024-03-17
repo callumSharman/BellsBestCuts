@@ -2,6 +2,10 @@
     height: 100vh;
 }
 
+.pageTitleImg{
+    width: 500px;
+}
+
 .heading{
     /* background-image is set using JS */
     background-color: var(--colour-two); /* Used if the background is unavailable */
@@ -84,6 +88,10 @@ h1{
     .imgBubble{
         height: 12px;
         width: 12px;
+    }
+
+    .pageTitleImg{
+        width: 70vw;
     }
 
 }

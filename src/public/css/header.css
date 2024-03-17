@@ -15,7 +15,7 @@
     height: 6px;
     width:0%;
     top:42px;
-    background-color: var(--colour-two);
+    background-color: var(--colour-five);
     position: fixed;
     z-index: 11;
 
@@ -76,7 +76,7 @@
     border-width: 6px;
     border-color: var(--colour-one);
     cursor: pointer;
-    z-index: 12;
+    z-index: 13;
     transition: 0.3s;
 }
 
@@ -87,6 +87,7 @@
     left:-4px;
     top:28px;
     cursor: pointer;
+    z-index: 12;
 }
 
 .logoContainer:hover .logo{

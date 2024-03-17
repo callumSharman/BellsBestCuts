@@ -59,29 +59,42 @@ export function scrollDownTo(sectionId){
 /** handles the behaviour related to the sliding down menu in mobile mode */
 export function mobileMenuBehaviour(){
     const mobileMenu = document.getElementById("mobileMenu");
-    const meunButtonX = document.getElementById("menuButtonX");
-    const menuButtonSymbol = document.getElementById("menuButtonSymbol");
 
-
-    
     let menuEnabled = false;
     if(mobileMenu.style.display === 'none'){
         menuEnabled = false;
     } else menuEnabled = true;
 
     if(menuEnabled){ // enabled - turn off menu
-        mobileMenu.style.display = 'none';
-        menuButtonSymbol.style.display = 'flex';
-        meunButtonX.style.display = 'none';
-        document.body.style.overflow = 'auto'; // resume scrolling behaviour
-        
+        disableMobileMenu();
     } else { // disabled - turn on menu
-        mobileMenu.style.display='block';
-        menuButtonSymbol.style.display = 'none';
-        meunButtonX.style.display = 'block';
-        document.body.style.overflow = 'hidden'; // restricts scrolling
+        enableMobileMenu();
     }
     
+}
+
+/** turns of the mobile menu */
+export function disableMobileMenu(){
+    const mobileMenu = document.getElementById("mobileMenu");
+    const meunButtonX = document.getElementById("menuButtonX");
+    const menuButtonSymbol = document.getElementById("menuButtonSymbol");
+
+    mobileMenu.style.display = 'none';
+    menuButtonSymbol.style.display = 'flex';
+    meunButtonX.style.display = 'none';
+    document.body.style.overflow = 'auto'; // resume scrolling behaviour
+}
+
+/** turns on the mobile menu */
+function enableMobileMenu(){
+    const mobileMenu = document.getElementById("mobileMenu");
+    const meunButtonX = document.getElementById("menuButtonX");
+    const menuButtonSymbol = document.getElementById("menuButtonSymbol");
+
+    mobileMenu.style.display='block';
+    menuButtonSymbol.style.display = 'none';
+    meunButtonX.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // restricts scrolling
 }
 
 /** draws the header image bubble based on the array of header images */

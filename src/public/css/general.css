@@ -1,8 +1,9 @@
 :root {
     --colour-one:rgb(27, 27, 27);
     --colour-two:rgb(167, 122, 86);
-    --colour-three:rgb(40, 40, 40);
-    --colour-four:rgba(90, 90, 90, 0.322);/* hover colour*/
+    --colour-three:rgb(40, 40, 40); /* second content section colour */
+    --colour-four:rgba(90, 90, 90, 0.322); /* hover colour*/
+    --colour-five:rgb(230, 180, 74); /* mustard colour */
     --font-family-one:Verdana, Geneva, Tahoma, sans-serif;
     --font-family-two:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -51,11 +52,11 @@ body {
 .ctaButton{
     width: 150px;
     height: 40px;
-    background-color: rgb(230, 180, 74);
+    background-color: var(--colour-five);
     cursor: pointer;
     border: solid;
     border-width: 2px;
-    border-color: rgb(230, 180, 74);
+    border-color: var(--colour-five);
     border-radius: 10px;
 
     box-shadow: -1px 1px 8px 0 rgba(0, 0, 0, 0.418);

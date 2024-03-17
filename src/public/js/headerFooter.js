@@ -1,6 +1,6 @@
 /** adds the content from header.html and from footer.html to the webpage once loaded */
 
-import { scrollDownTo, mobileMenuBehaviour } from "./general.js";
+import { scrollDownTo, mobileMenuBehaviour, disableMobileMenu } from "./general.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -96,14 +96,33 @@ function progBarBehaviour(){
 /** adds functionality to the header buttons */
 function addHeaderButtonFuncs(){
 
+    /*=============================HOME PAGE=============================*/
     if(document.title == "Bell's Best Cuts"){
+        // Desktop
         const aboutSectionButton = document.getElementById("aboutSectionButton");
         aboutSectionButton.onclick = () => { scrollDownTo("aboutSection"); };
 
         const contactSectionButton = document.getElementById("contactSectionButton");
         contactSectionButton.onclick = () => { scrollDownTo("contactSection"); };
 
-    } else if (document.title == "Bell's Best Cuts | Gallery"){
+        // Mobile
+        const mobileAboutSectionButton = document.getElementById("mobileAboutSectionButton");
+        mobileAboutSectionButton.onclick = () => {
+            disableMobileMenu();
+            scrollDownTo("aboutSection");
+        }
+
+        const mobileContactSectionButton = document.getElementById("mobileContactSectionButton");
+        mobileContactSectionButton.onclick = () => {
+            disableMobileMenu();
+            scrollDownTo("contactSection");
+        }
+    } 
+
+
+    /*=============================GALLERY PAGE=============================*/
+    else if (document.title == "Bell's Best Cuts | Gallery"){ // GALLERY PAGE
+        // Desktop
         const aboutSectionButton = document.getElementById("aboutSectionButton");
         aboutSectionButton.onclick = () => {
             location.href='index.html#aboutSection'; // must first redirect;
@@ -112,8 +131,20 @@ function addHeaderButtonFuncs(){
         const contactSectionButton = document.getElementById("contactSectionButton");
         contactSectionButton.onclick = () => {
             location.href='index.html#contactSection'; // must first redirect
-
         };
+
+        // Mobile
+        const mobileAboutSectionButton = document.getElementById("mobileAboutSectionButton");
+        mobileAboutSectionButton.onclick = () => {
+            disableMobileMenu();
+            location.href='index.html#aboutSection'; // must first redirect;
+        }
+
+        const mobileContactSectionButton = document.getElementById("mobileContactSectionButton");
+        mobileContactSectionButton.onclick = () => {
+            disableMobileMenu();
+            location.href='index.html#contactSection'; // must first redirect
+        }
 
     }
 
