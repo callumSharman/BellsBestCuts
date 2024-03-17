@@ -167,10 +167,15 @@ export function populateTeamSection(){
                 teamMemberBox.append(teamMemberImg);
         
                 // add the name
+
+                let teamMemberNameBox = document.createElement('div');
+                teamMemberNameBox.className = "teamMemberNameBox";
+
                 let teamMemberName = document.createElement('div');
                 teamMemberName.className = "text";
                 teamMemberName.append(nameFromImgName(imgName));
-                teamMemberBox.append(teamMemberName);
+                teamMemberNameBox.append(teamMemberName);
+                teamMemberBox.append(teamMemberNameBox);
         
                 // add the new box to the container
                 teamContainer.append(teamMemberBox);

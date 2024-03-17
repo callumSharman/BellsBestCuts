@@ -1,16 +1,20 @@
+.contactBoxContainer{
+    padding: 60px;
+    background-color: var(--colour-three);
+}
+
 .contactBox{
+
     display:flex;
     flex-direction: row;
     justify-content: center;
-    padding-bottom: 60px;
-    padding-top: 60px;
-    padding-left: 60px;
-    background-color: var(--colour-three);
+    
 }
 
 .contactDetailsContainer{
     width: 50%;
 }
+
 .mapContainerContainer{
     width: 50%; display: flex; justify-content: center; align-items: center;
 }
@@ -19,8 +23,9 @@
     border: solid;
     border-width: 3px;
     border-color: rgb(66, 66, 66);
-    width:70%;
+    width:75%;
     height:100%;
+    margin-left: 80px;
 }
 
 .embeddedMap{
@@ -90,9 +95,11 @@
 
 
 @media(max-width:768px) {
+    .contactBoxContainer{
+        padding: 30px;
+    }
     .contactBox{
         flex-direction: column;
-        padding: 30px;
     }
     .contactDetailsContainer{
         width:90%;
@@ -102,7 +109,8 @@
         height:40vh;
     }
     .mapContainer{
-        width:90%
+        width:90%;
+        margin-left:0px;
     }
     .contactTextHeading{
         font-size: 12px;
@@ -115,7 +123,7 @@
         padding-bottom: 30px;
     }
     .contactBoxHeading{
-        font-size: 18pt;
+        font-size: 22pt;
     }
 
     .dayText{

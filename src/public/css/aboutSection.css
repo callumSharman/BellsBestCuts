@@ -42,7 +42,7 @@
 }
 
 .emphasisAboutText{
-    color: rgb(167, 122, 86);
+    color: rgb(230, 180, 74);
     font-size: 20px;
     font-family: var(--font-family-one);
 }
@@ -50,7 +50,10 @@
 @media(max-width:768px) {
     .aboutBox{
         flex-direction: column;
-        padding-left: 60px;
+        padding: 30px;
+    }
+    .aboutHeading{
+        font-size: 22pt;
     }
     .aboutBoxSection1{
         width:100%;

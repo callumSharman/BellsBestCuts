@@ -44,12 +44,15 @@
     align-items: center;
     justify-content: center;
     overflow:hidden;
+    background-color: var(--colour-one);
+    transition: 0.2s; /* transition off click */
 }
 
 .headerButton:hover{
     background-color: var(--colour-four);
     transition: 0.10s;
     overflow:visible;
+    transition: 0.1s; /* transition into click */
 }
 
 .headerButtonText{
@@ -96,6 +99,8 @@
     align-items: center;
     width: 100%;
     cursor: pointer;
+    background-color: var(--colour-one);
+    transition: 0.2s; /* transition off click */
 }
 
 .dropDownText{
@@ -105,6 +110,7 @@
 
 .dropDownSection:hover{
     background-color: var(--colour-four);
+    transition: 0.1s; /* transition into click */
 }
 
 #menuButtonContainer{

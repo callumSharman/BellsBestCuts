@@ -41,6 +41,51 @@ body {
     font-family: var(--font-family-one);
 }
 
+.ctaButtonContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+}
+
+.ctaButton{
+    width: 150px;
+    height: 40px;
+    background-color: rgb(230, 180, 74);
+    cursor: pointer;
+    border: solid;
+    border-width: 2px;
+    border-color: rgb(230, 180, 74);
+    border-radius: 10px;
+
+    box-shadow: -1px 1px 8px 0 rgba(0, 0, 0, 0.418);
+
+    transition: background-color 0.4s, box-shadow 0.4s;
+
+}
+
+.ctaButton:hover{
+    background-color: rgba(229, 209, 166, 0);
+    transition: 0.2s;
+}
+
+.ctaButtonText{
+    height: 100%;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family-one);
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.ctaButton:hover .ctaButtonText{
+    color: white;
+}
+
+
 .faceBookPosts{
     display: flex;
     flex-direction: row;
@@ -80,10 +125,7 @@ body {
 }
 
 .reviewsContainer{
-    padding-bottom: 60px;
-    padding-top: 60px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding:60px;
 }
 
 .reviewContainerContainer{
@@ -148,5 +190,13 @@ body {
         height: 400px;
         margin-top: 5px;
         margin-bottom: 5px;
+    }
+
+    .reviewsContainer{
+        padding: 30px;
+    }
+
+    .reviewsHeading{
+        font-size: 22pt;
     }
 }
