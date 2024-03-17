@@ -70,9 +70,6 @@
 }
 
 .logo{
-    position: relative;
-    left:-4px;
-    top:28px;
     width:90px; 
     border: solid;
     border-radius: 50%;
@@ -80,6 +77,23 @@
     border-color: var(--colour-one);
     cursor: pointer;
     z-index: 12;
+    transition: 0.3s;
+}
+
+.logoContainer{
+    width: 102px;
+    height: 102px;
+    position: relative;
+    left:-4px;
+    top:28px;
+    cursor: pointer;
+}
+
+.logoContainer:hover .logo{
+    left:-1px;
+    top:74px;
+    width:180px;
+    transition: 0.5s;
 }
 
 .headerButtonContainer{
