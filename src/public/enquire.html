@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="css/headings.css">
         <link rel="stylesheet" href="css/returnArrow.css">
         <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/enquire.css">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,12 +40,42 @@
         </div>
 
         <div class="content">
-            <div class="contentSection" id="aboutSection" style="min-height: 100vh;">
+            <div class="contentSection" id="aboutSection" style="top:4vh;min-height: 100vh;">
                 <div class="contentBody">
                     <div class="contentBodySection">
+                        <div class="enquirySection">
+                            <div class="text">Enter your name, email and message. We will be in contact as soon as possible.</div>
+                            <p></p>
 
+                            <form id="enquiryForm">
+                                <label class="text" for="nameField">Name:</label>
+                                <div class="inputWrapper">
+                                    <input type="text" id="nameField" name="nameField" placeholder="Name" autocomplete="off" spellcheck="false" required>
+                                </div>
+                                <p></p>
+
+
+                                <label class="text" for="emailField">Email:</label>
+                                <div class="inputWrapper">
+                                    <input type="text" id="emailField" name="emailField" placeholder="Email" autocomplete="off" spellcheck="false" required>
+                                </div>
+                                <p></p>
+
+
+
+                                <label class="text" for="messageField">Message:</label>
+                                <div class="textAreaWrapper">
+                                    <textarea id="messageField" name="messageField" placeholder="Enter your message" autocomplete="off" spellcheck="false" required></textarea>
+                                </div>
+                                
+                                <div class="inputWrapper">
+                                    <input type="submit" value="Submit">
+                                </div>
+
+                            </form>
+
+                        </div>
                     </div>
-
                 </div>           
             </div>
         </div>
@@ -52,14 +83,11 @@
 
         <!-- SCRIPTS -->
         <script type="module">
-            import { returnArrowBehaviour,  
-                     drawHeaderImgBubbles, 
-                     slideShowBehaviour } from "./js/general.js";
+            import { returnArrowBehaviour, handleEnquirySubmission } from "./js/general.js";
 
             document.addEventListener('DOMContentLoaded', () => {
                 returnArrowBehaviour();
-                drawHeaderImgBubbles()
-                slideShowBehaviour();
+                //handleEnquirySubmission();
             })
         </script>
         <script type="module">

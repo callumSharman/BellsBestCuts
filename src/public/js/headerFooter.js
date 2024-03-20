@@ -125,25 +125,25 @@ function addHeaderButtonFuncs(){
         // Desktop
         const aboutSectionButton = document.getElementById("aboutSectionButton");
         aboutSectionButton.onclick = () => {
-            location.href='index.html#aboutSection'; // must first redirect;
+            location.href='/#aboutSection'; // must first redirect;
         };
 
         const contactSectionButton = document.getElementById("contactSectionButton");
         contactSectionButton.onclick = () => {
-            location.href='index.html#contactSection'; // must first redirect
+            location.href='/#contactSection'; // must first redirect
         };
 
         // Mobile
         const mobileAboutSectionButton = document.getElementById("mobileAboutSectionButton");
         mobileAboutSectionButton.onclick = () => {
             disableMobileMenu();
-            location.href='index.html#aboutSection'; // must first redirect;
+            location.href='/#aboutSection'; // must first redirect;
         }
 
         const mobileContactSectionButton = document.getElementById("mobileContactSectionButton");
         mobileContactSectionButton.onclick = () => {
             disableMobileMenu();
-            location.href='index.html#contactSection'; // must first redirect
+            location.href='/#contactSection'; // must first redirect
         }
 
     }

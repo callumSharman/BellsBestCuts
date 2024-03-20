@@ -254,3 +254,20 @@ export function populateGallery(maxNumImages){
             }
         });
 }
+
+/** handles the submission of a enquiry form */
+export function handleEnquirySubmission(){
+    document.getElementById('enquiryForm').addEventListener('submit', event => {
+        event.preventDefault(); // Prevent default form submission
+
+        const formData = new FormData(event.target);
+        const name = formData.get('nameField');
+        const email = formData.get('emailField');
+        const message = formData.get('messageField');
+
+        console.log(`${name},${email},${message}`);
+
+
+    });
+
+}

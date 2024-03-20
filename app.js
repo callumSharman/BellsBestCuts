@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 const path = require('path');
+const url = require('url');
 const fs = require('fs');
 
 
@@ -69,9 +70,42 @@ app.get('/api/facebook', (req, res) => {
     res.send("Hello, World!");
 })
 
-
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/src/public/index.html'));
+});
+
+app.get('/order', (req, res) => {
+    res.sendFile(path.join(__dirname, '/src/public/order.html'));
+});
+
+app.get('/gallery', (req, res) => {
+    res.sendFile(path.join(__dirname, '/src/public/gallery.html'));
+});
+
+app.get('/enquire', (req, res) => {
+    const urlParts = url.parse(req.url, true);
+    const query = urlParts.query;
+ 
+    // Extract data from the query
+    const name = query.nameField;
+    const email = query.emailField;
+    const message = query.messageField;
+
+    if((name != undefined) && 
+       (email != undefined) && 
+       (message != undefined)){
+
+        // Process the data
+        console.log('Name:', name);
+        console.log('Email:', email);
+        console.log('Message:', message);
+
+        // Redirect home
+        res.redirect('/');
+
+    }
+
+    res.sendFile(path.join(__dirname, '/src/public/enquire.html'));
 });
 
 

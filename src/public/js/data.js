@@ -11,6 +11,23 @@ function getData(url, reqHeaders) {
     });
 }
 
+export function postData(url, json){
+    return fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(json)
+        })
+        .then(response => response.json())
+        .then(data => {
+            return data;
+        })
+        .catch(() => {
+            throw new Error('Network response was not ok');
+        });
+}
+
 
 /** GET: returns an array of gallery image names */
 export function getGallery(){
