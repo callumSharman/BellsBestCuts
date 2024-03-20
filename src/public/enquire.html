@@ -4,7 +4,7 @@
         <!-- Meta -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bell's Best Cuts | Gallery</title>
+        <title>Bell's Best Cuts | Enquire</title>
 
         <!-- Style Sheets -->
         <link rel="stylesheet" href="css/general.css">
@@ -12,7 +12,6 @@
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/headings.css">
         <link rel="stylesheet" href="css/returnArrow.css">
-        <link rel="stylesheet" href="css/gallery.css">
         <link rel="stylesheet" href="css/fonts.css">
 
         <!-- Fonts -->
@@ -39,39 +38,14 @@
             </div>
         </div>
 
-
-        <!-- HEADING -->
-        <div class="heading" id="heading" style="height: 60vh;">
-            <div class="headingContents" style="height: 60vh;">
-                <h1 style="position: relative; top:6vh">
-                    Gallery
-                </h1>
-                <div class="imgBubbleSelector" id="imgBubbleSelector" style="position: relative; top:6vh"> 
-                    <!-- holds the image bubbles -->
-                </div>
-            </div>
-        </div>
-
-
-        <div class="content" style="width: 100%;">
-
-            <!-- GALLERY SECTION -->
-            <div class="contentSection">
+        <div class="content">
+            <div class="contentSection" id="aboutSection" style="min-height: 100vh;">
                 <div class="contentBody">
                     <div class="contentBodySection">
-                        
-                        <div class="gallery" style="background-color: var(--colour-one);">
-                            <div class="galleryImgs" id="galleryImgs">
-                                
-                            </div>
-                            <div class="ctaButtonContainer" style="margin-top:60px;">
-                                <div class="ctaButton" onclick="location.href='index.html';">
-                                    <div class="ctaButtonText">BACK HOME &#9654</div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
-                </div>
+
+                </div>           
             </div>
         </div>
 
@@ -80,14 +54,12 @@
         <script type="module">
             import { returnArrowBehaviour,  
                      drawHeaderImgBubbles, 
-                     slideShowBehaviour, 
-                     populateGallery } from "./js/general.js";
-                     
+                     slideShowBehaviour } from "./js/general.js";
+
             document.addEventListener('DOMContentLoaded', () => {
                 returnArrowBehaviour();
                 drawHeaderImgBubbles()
                 slideShowBehaviour();
-                populateGallery(-1);
             })
         </script>
         <script type="module">
@@ -101,7 +73,6 @@
         </script>
 
         <!-- FOOTER -->
-
 
     </body>
 </html>

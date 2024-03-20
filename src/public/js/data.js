@@ -36,3 +36,12 @@ export function getTeamImgNames(){
             return data;
         })
 }
+
+
+/** GET: returns latest Facebook posts? */
+export function getFacebookPosts(){
+    return getData('/api/facebook')
+        .then(data => {
+            return data;
+        })
+}

@@ -63,6 +63,13 @@ app.get('/api/team', (req, res) => {
 })
 
 
+/** GET: returns latest Facebook posts? */
+app.get('/api/facebook', (req, res) => {
+
+    res.send("Hello, World!");
+})
+
+
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/src/public/index.html'));
 });

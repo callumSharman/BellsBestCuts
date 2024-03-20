@@ -120,8 +120,8 @@ function addHeaderButtonFuncs(){
     } 
 
 
-    /*=============================GALLERY PAGE=============================*/
-    else if (document.title == "Bell's Best Cuts | Gallery"){ // GALLERY PAGE
+    /*=============================NON-HOME PAGE=============================*/
+    else { // NON-HOME PAGE
         // Desktop
         const aboutSectionButton = document.getElementById("aboutSectionButton");
         aboutSectionButton.onclick = () => {
