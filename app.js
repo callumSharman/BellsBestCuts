@@ -36,16 +36,17 @@ app.get('/enquire', (req, res) => {
         const enquirySender = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-              user: 'bellsbestcutsenquiry@gmail.com',
-              pass: '72ALvq%RLG'
+                user: 'bellsbestcutsenquiry@gmail.com',
+            //   pass: '72ALvq%RLG'
+                pass: 'bspg tyyj xccs nyca'
             }
         });
 
         const mailOptions = {
             from: 'bellsbestcutsenquiry@gmail.com',
             to: 'callumsharman64@gmail.com',
-            subject: 'Enquiry from BellsBestCuts.com',
-            text: `name: ${name}, email: ${email}, message "${message}"`
+            subject: `Enquiry from ${name}`,
+            text: `Name:\n${name}\n\nEmail:\n${email}\n\nMessage:\n${message}`
         };
 
 
@@ -60,9 +61,9 @@ app.get('/enquire', (req, res) => {
         // Redirect home
         res.redirect('/');
 
+    } else {
+        res.sendFile(path.join(__dirname, '/src/public/enquire.html'));
     }
-
-    res.sendFile(path.join(__dirname, '/src/public/enquire.html'));
 });
 
 
