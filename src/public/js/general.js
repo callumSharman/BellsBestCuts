@@ -115,7 +115,29 @@ export function drawHeaderImgBubbles(){
                 imgBubble.id = "imgBubble-" + i;
                 imgBubbleContainer.append(imgBubble);
 
+
+                imgBubble.onclick = () => {setHeaderImgToIndex(i)};
             }
+        })
+}
+
+let CURR_HEADER_IMG_INDEX = 0; // global variable... YUCK!!
+
+/** sets the header image to the image with the given index */
+function setHeaderImgToIndex(index){
+    const pathToImgs = "../img/headers/";
+    const heading = document.getElementById("heading");
+
+    getHeadingImgs()
+        .then(imgNames => {
+            let imgPaths = imgNames.map(imgName => pathToImgs + imgName);
+            return imgPaths;
+        })
+        .then(headingImgs => {
+            heading.style.backgroundImage = "url(" + headingImgs[index] + ")";
+            fixHeaderImgBubbles(index, headingImgs.length);
+            CURR_HEADER_IMG_INDEX = index;
+            console.log(`CURR_HEADER_IMG_INDEX: ${CURR_HEADER_IMG_INDEX}`);
         })
 }
 
@@ -137,8 +159,14 @@ function fixHeaderImgBubbles(currentlyDisplayedIndex, numImages){
 /** handles the heading slideshow behaviour */
 export function slideShowBehaviour(){
     const pathToImgs = "../img/headers/";
-    const TIME_BETWEEN_IMAGES = 10000 // in milliseconds
+    const TIME_BETWEEN_IMAGES = 4000 // in milliseconds
     const heading = document.getElementById("heading");
+
+
+
+    // change based on the index of the currently displayed image NOT the next in the list
+
+
 
     // retrieve the heading images names first
     getHeadingImgs()
@@ -147,19 +175,21 @@ export function slideShowBehaviour(){
             return imgPaths;
         })
         .then(headingImgs => {
-            let headingImgsIndex = 0;
 
             function nextImage(){
-                heading.style.backgroundImage = "url(" + headingImgs[headingImgsIndex] + ")";
-                fixHeaderImgBubbles(headingImgsIndex, headingImgs.length);
-        
-                headingImgsIndex ++;
-                if(headingImgsIndex >= headingImgs.length){
-                    headingImgsIndex = 0;
+                CURR_HEADER_IMG_INDEX ++;
+                if(CURR_HEADER_IMG_INDEX >= headingImgs.length){
+                    CURR_HEADER_IMG_INDEX = 0;
                 }
+
+                heading.style.backgroundImage = "url(" + headingImgs[CURR_HEADER_IMG_INDEX] + ")";
+                fixHeaderImgBubbles(CURR_HEADER_IMG_INDEX, headingImgs.length);
+        
             }
         
-            nextImage();
+            heading.style.backgroundImage = "url(" + headingImgs[CURR_HEADER_IMG_INDEX] + ")";
+            fixHeaderImgBubbles(CURR_HEADER_IMG_INDEX, headingImgs.length);
+        
         
             setInterval(nextImage, TIME_BETWEEN_IMAGES); // triggers the next image after given time period
         })
@@ -233,7 +263,6 @@ function nameFromImgName(imgName){
     }
     return name;
 }
-
 
 /** populates the image gallery from the src/public/img/gallery folder. If 'maxNumImages' is set to -1 then the max number will be added */
 export function populateGallery(maxNumImages){
