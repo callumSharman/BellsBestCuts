@@ -1,6 +1,6 @@
 /** adds the content from header.html and from footer.html to the webpage once loaded */
 
-import { scrollDownTo, mobileMenuBehaviour, disableMobileMenu } from "./general.js";
+import { scrollDownTo, changeMobileMenuState, disableMobileMenu } from "./general.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -149,5 +149,5 @@ function addHeaderButtonFuncs(){
     }
 
     const mobileMenuButton = document.getElementById("menuButton");
-    mobileMenuButton.onclick = () => { mobileMenuBehaviour(); };
+    mobileMenuButton.onclick = () => { changeMobileMenuState(); };
 }

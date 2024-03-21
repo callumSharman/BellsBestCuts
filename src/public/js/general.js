@@ -57,11 +57,14 @@ export function scrollDownTo(sectionId){
 }
 
 /** handles the behaviour related to the sliding down menu in mobile mode */
-export function mobileMenuBehaviour(){
+export function changeMobileMenuState(){
     const mobileMenu = document.getElementById("mobileMenu");
 
+    // this method takes into account more factors than a standard .style.display
+    const computedStyle = window.getComputedStyle(mobileMenu);
+
     let menuEnabled = false;
-    if(mobileMenu.style.display === 'none'){
+    if(computedStyle.display === 'none'){
         menuEnabled = false;
     } else menuEnabled = true;
 

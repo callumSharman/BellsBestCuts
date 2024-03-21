@@ -36,7 +36,10 @@
         padding: 30px;
     }
     .galleryImg{
-        height:170px;
+        height:150px;
+        padding: 3px;
+        padding-top: 6px;
+        padding-bottom: 6px;
     }
     .galleryHeading{
         font-size: 22pt;
