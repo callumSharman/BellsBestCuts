@@ -3,3 +3,27 @@
     padding-top: 80px;
 }
 
+textarea{
+    width: 400px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    font-size: 14px;
+    padding: 6px 10px;
+}
+
+.inputLine{
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 6px 10px;
+}
+
+.submitButton{
+    border: 2px solid #cccccc00;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 6px 10px;
+}

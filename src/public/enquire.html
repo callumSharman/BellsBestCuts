@@ -41,7 +41,7 @@
 
         <div class="content">
             <div style="height: 30px;"></div> <!-- blank space above content -->
-            <div class="contentSection" id="aboutSection" style="height: 80vh; top:4vh;">
+            <div class="contentSection" id="aboutSection" style="height: auto; top:4vh;">
                 <div class="contentBody">
                     <div class="contentBodySection">
                         <div class="enquirySection">
@@ -51,26 +51,32 @@
                             <form id="enquiryForm">
                                 <label class="text" for="nameField">Name:</label>
                                 <div class="inputWrapper">
-                                    <input type="text" id="nameField" name="nameField" placeholder="Name" autocomplete="off" spellcheck="false" required>
+                                    <input class="inputLine" type="text" id="nameField" name="nameField" placeholder="Name" autocomplete="off" spellcheck="false" required>
                                 </div>
                                 <p></p>
 
 
                                 <label class="text" for="emailField">Email:</label>
                                 <div class="inputWrapper">
-                                    <input type="text" id="emailField" name="emailField" placeholder="Email" autocomplete="off" spellcheck="false" required>
+                                    <input class="inputLine" type="text" id="emailField" name="emailField" placeholder="Email" autocomplete="off" spellcheck="false" required>
                                 </div>
                                 <p></p>
-
 
 
                                 <label class="text" for="messageField">Message:</label>
                                 <div class="textAreaWrapper">
                                     <textarea id="messageField" name="messageField" placeholder="Enter your message" autocomplete="off" spellcheck="false" required></textarea>
                                 </div>
+                                <p></p>
                                 
                                 <div class="inputWrapper">
-                                    <input type="submit" value="Submit">
+                                    <input class="submitButton" type="submit" value="Submit">
+                                </div>
+
+                                <div class="ctaButtonContainer" style="margin-top:30px;">
+                                    <div class="ctaButton" onclick="location.href='/';">
+                                        <div class="ctaButtonText">BACK HOME &#9654</div>
+                                    </div>
                                 </div>
 
                             </form>

@@ -3,7 +3,8 @@
 }
 
 .pageTitleImg{
-    width: 500px;
+    width: 90vh;
+    margin-top: 40px;
 }
 
 .heading{
@@ -45,7 +46,7 @@ h1{
 .imgBubbleSelector{
     display: flex;
     position: relative;
-    top: -4%;
+    top: -8vh;
 }
 
 .imgBubble{
