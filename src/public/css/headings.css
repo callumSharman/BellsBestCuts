@@ -57,7 +57,12 @@ h1{
     border-width: 1px;
     border-color: var(--colour-one);
     border-radius: 50%;
-    cursor: pointer;
+    transition: 0.2s;
+}
+
+.imgBubble:hover{
+    border-color: var(--colour-five);
+    transition: 0.2s;
 }
 
 @keyframes h1Load{

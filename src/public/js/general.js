@@ -137,7 +137,6 @@ function setHeaderImgToIndex(index){
             heading.style.backgroundImage = "url(" + headingImgs[index] + ")";
             fixHeaderImgBubbles(index, headingImgs.length);
             CURR_HEADER_IMG_INDEX = index;
-            console.log(`CURR_HEADER_IMG_INDEX: ${CURR_HEADER_IMG_INDEX}`);
         })
 }
 
