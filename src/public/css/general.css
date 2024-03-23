@@ -17,7 +17,7 @@ body {
 .content{
     position: relative;
     height: 100%;
-    width: 95%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     z-index: 2;
@@ -38,7 +38,7 @@ body {
 
 .text{
     color:rgb(255, 255, 255);
-    font-size: 14pt;
+    font-size: 12pt;
     font-family: var(--font-family-one);
 }
 
@@ -81,6 +81,7 @@ body {
     font-family: var(--font-family-one);
     font-weight: bold;
     transition: 0.4s;
+    font-size: 12pt;
 }
 
 .ctaButton:hover .ctaButtonText{
@@ -148,7 +149,7 @@ body {
 
 .reviewsHeading{
     color:rgb(255, 255, 255);
-    font-size: 26pt;
+    font-size: 24pt;
     font-family: var(--font-family-two);
     text-align: right;
 }
@@ -173,7 +174,7 @@ body {
 
 @media(min-width:1280px){
     .content{
-        width: 1216px;
+        width: 1152px;
     }
 }
 

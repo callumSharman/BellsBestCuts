@@ -179,10 +179,15 @@
     }
 
     .logo{
-        width:47px;
-        top:2px;
-        left:0px;
-        border-width: 2px;
+        width:90px; 
+        border-width: 3px;
+    }
+    
+    .logoContainer{
+        width: 102px;
+        height: 102px;
+        left:-2px;
+
     }
 
     .progBar{

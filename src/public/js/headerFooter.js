@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(() => {
             // set up the header button functions
             addHeaderButtonFuncs();
+            console.log(window.innerWidth);
         })
 
     fetch('html/footer.html')

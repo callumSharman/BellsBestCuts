@@ -56,7 +56,7 @@
     width:50px;
     border-radius: 50%;
     background-color: rgb(255, 255, 255);
-    font-size: 12pt;
+    font-size: 10pt;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,26 +70,26 @@
     justify-content: center;
     align-items: center;
     color:rgb(255, 255, 255);
-    font-size: 10pt;
+    font-size: 8pt;
     font-family: var(--font-family-one);
 }
 
 .contactTextHeading{
     color:rgb(255, 255, 255);
-    font-size: 15px;
+    font-size: 13px;
     font-family: var(--font-family-one);
 }
 
 .contactText{
     color:rgb(255, 255, 255);
-    font-size: 20px;
+    font-size: 18px;
     font-family: var(--font-family-one);
     padding-bottom: 35px;
 }
 
 .contactBoxHeading{
     color:rgb(255, 255, 255);
-    font-size: 26pt;
+    font-size: 24pt;
     font-family: var(--font-family-two);
 }
 
