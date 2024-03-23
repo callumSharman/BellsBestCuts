@@ -96,6 +96,11 @@ h1{
         width: 12px;
     }
 
+    .imgBubble:hover{
+        border-color: var(--colour-one);
+        transition: 0.2s;
+    }
+
     .pageTitleImg{
         width: 70vw;
     }

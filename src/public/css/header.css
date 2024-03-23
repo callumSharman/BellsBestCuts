@@ -1,6 +1,7 @@
 .header, .headerContents{
     height: 42px;
 }
+
 .header{
     color: white;
     background-color: var(--colour-one);
@@ -21,6 +22,7 @@
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(22, 22, 22, 0.164);
 }
+
 .headerContents{
     display: flex;
     align-items: center;
@@ -43,7 +45,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow:hidden;
+    overflow:hidden; /* THIS IS RESPONSIBLE FOR THE DROP DOWN VANISHING */
     background-color: var(--colour-one);
     transition: 0.2s; /* transition off click */
 }
@@ -51,7 +53,7 @@
 .headerButton:hover{
     background-color: var(--colour-four);
     transition: 0.10s;
-    overflow:visible;
+    overflow:visible; /* THIS IS RESPONSIBLE FOR THE DROP DOWN APPEARING */
     transition: 0.1s; /* transition into click */
 }
 
